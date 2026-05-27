@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vandal Multiservices — Refined Care for Refined Spaces</title>
+  <meta name="description" content="Vandal Multiservices delivers prestige craftsmanship: tile painting, patio cleaning, gardening, minor repairs, and wallpapering — performed with quiet precision." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./assets/styles.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'] },
+          colors: {
+            sage: { 50:'#f4f7f4', 100:'#e6ede5', 200:'#cddacb', 300:'#a9c0a7', 400:'#82a280', 500:'#5d8a5b', 600:'#456b44', 700:'#365538', 800:'#2c4530', 900:'#243828' },
+            ink: '#0a0a0a',
+            mist: '#f5f5f7',
+          },
+          letterSpacing: { tightest: '-0.045em' },
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-white text-ink font-sans antialiased selection:bg-sage-200 selection:text-sage-900">
+
+  <!-- Navigation -->
+  <header id="nav" class="group fixed top-0 inset-x-0 z-50 transition-all duration-500">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 py-5 flex items-center justify-between">
+      <a href="./index.html" class="flex items-center gap-2 group">
+        <span class="w-7 h-7 rounded-full border border-white/60 group-[.scrolled]:border-ink/20 flex items-center justify-center transition-colors">
+          <span class="w-2 h-2 rounded-full bg-sage-400"></span>
+        </span>
+        <span class="text-white group-[.scrolled]:text-ink font-medium tracking-tight transition-colors">Vandal</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-10 text-sm">
+        <a href="./services.html" class="text-white/85 hover:text-white group-[.scrolled]:text-ink/70 group-[.scrolled]:hover:text-ink transition-colors">Services</a>
+        <a href="./about.html"    class="text-white/85 hover:text-white group-[.scrolled]:text-ink/70 group-[.scrolled]:hover:text-ink transition-colors">About</a>
+        <a href="#process"        class="text-white/85 hover:text-white group-[.scrolled]:text-ink/70 group-[.scrolled]:hover:text-ink transition-colors">Process</a>
+        <a href="./contact.html"  class="text-white/85 hover:text-white group-[.scrolled]:text-ink/70 group-[.scrolled]:hover:text-ink transition-colors">Contact</a>
+      </nav>
+      <a href="./contact.html" class="hidden md:inline-flex items-center gap-2 text-sm px-5 py-2.5 rounded-full bg-white/10 backdrop-blur-md border border-white/25 text-white hover:bg-white/20 group-[.scrolled]:bg-sage-500/10 group-[.scrolled]:border-sage-500/30 group-[.scrolled]:text-sage-700 transition-all">
+        Free Quote
+        <span class="w-1.5 h-1.5 rounded-full bg-sage-300 group-[.scrolled]:bg-sage-500"></span>
+      </a>
+      <button id="menuBtn" class="md:hidden text-white group-[.scrolled]:text-ink" aria-label="Menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+    <div id="mobileMenu" class="md:hidden hidden bg-white/95 backdrop-blur-lg border-t border-ink/5">
+      <div class="px-6 py-6 flex flex-col gap-4 text-ink">
+        <a href="./services.html">Services</a>
+        <a href="./about.html">About</a>
+        <a href="#process">Process</a>
+        <a href="./contact.html">Contact</a>
+        <a href="./contact.html" class="mt-2 inline-flex items-center justify-center px-5 py-3 rounded-full bg-sage-500 text-white">Request a Free Quote</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative h-screen min-h-[720px] w-full overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2400&q=80" alt="Elegant clean patio" class="w-full h-full object-cover scale-105 will-change-transform" id="heroImg" />
+      <div class="absolute inset-0 bg-gradient-to-b from-black/55 via-black/30 to-black/70"></div>
+      <div class="absolute inset-0 bg-gradient-to-tr from-sage-900/30 via-transparent to-transparent"></div>
+    </div>
+
+    <div class="relative h-full max-w-7xl mx-auto px-6 lg:px-10 flex flex-col justify-end pb-24 md:pb-32">
+      <div class="reveal max-w-4xl">
+        <p class="text-white/80 text-sm tracking-[0.35em] uppercase mb-6 font-light">Vandal Multiservices</p>
+        <h1 class="text-white text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] leading-[0.95] tracking-tightest font-light">
+          Quiet craftsmanship.
+          <span class="block text-white/70 font-extralight italic">Lasting refinement.</span>
+        </h1>
+        <p class="mt-8 text-white/80 text-lg md:text-xl max-w-xl font-light leading-relaxed">
+          From restored tile to manicured gardens, every detail is rendered with the patience of an artisan and the precision of an engineer.
+        </p>
+        <div class="mt-10 flex flex-wrap gap-4 items-center">
+          <a href="./contact.html" class="cta-glow group inline-flex items-center gap-3 px-8 py-4 rounded-full bg-white/10 backdrop-blur-md border border-white/25 text-white text-sm tracking-wide hover:bg-white/15 transition-all">
+            Request a Free Quote
+            <svg class="transition-transform group-hover:translate-x-1" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#services" class="text-white/70 hover:text-white text-sm tracking-wide inline-flex items-center gap-2 px-2 py-4">
+            Explore services
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 text-white/60">
+      <span class="text-[10px] tracking-[0.3em] uppercase">Scroll</span>
+      <span class="w-px h-10 bg-gradient-to-b from-white/60 to-transparent"></span>
+    </div>
+  </section>
+
+  <!-- Bento Grid: 3 Benefits -->
+  <section id="services" class="py-28 md:py-40 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="reveal max-w-3xl mb-20">
+        <p class="text-sage-600 text-xs tracking-[0.35em] uppercase mb-4">Why Vandal</p>
+        <h2 class="text-4xl md:text-6xl tracking-tightest font-light text-ink leading-tight">
+          Three principles.<br />
+          <span class="text-gray-400 italic font-extralight">No compromise.</span>
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-5">
+        <!-- Card 1 -->
+        <article class="reveal group relative p-10 lg:p-12 rounded-3xl bg-mist hover:bg-sage-50 border border-transparent hover:border-sage-200/50 transition-all duration-500 min-h-[420px] flex flex-col">
+          <div class="w-12 h-12 rounded-2xl bg-white border border-sage-200/60 flex items-center justify-center mb-10 group-hover:scale-105 transition-transform">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5d8a5b" stroke-width="1.25"><path d="M12 2l2.39 7.36H22l-6.18 4.49L18.21 21 12 16.27 5.79 21l2.39-7.15L2 9.36h7.61z"/></svg>
+          </div>
+          <h3 class="text-2xl font-medium tracking-tight text-ink mb-3">Artisan Standard</h3>
+          <p class="text-gray-500 text-[15px] leading-relaxed font-light flex-1">
+            Every surface, joint, and edge is treated as a finished object. Materials are sourced for longevity, not convenience.
+          </p>
+          <div class="mt-8 flex items-center text-sm text-sage-600 opacity-0 group-hover:opacity-100 transition-opacity">
+            <span class="tracking-wide">Read more</span>
+            <svg class="ml-2" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="reveal group relative p-10 lg:p-12 rounded-3xl bg-mist hover:bg-sage-50 border border-transparent hover:border-sage-200/50 transition-all duration-500 min-h-[420px] flex flex-col">
+          <div class="w-12 h-12 rounded-2xl bg-white border border-sage-200/60 flex items-center justify-center mb-10 group-hover:scale-105 transition-transform">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5d8a5b" stroke-width="1.25"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          </div>
+          <h3 class="text-2xl font-medium tracking-tight text-ink mb-3">Punctual to the Hour</h3>
+          <p class="text-gray-500 text-[15px] leading-relaxed font-light flex-1">
+            A schedule we keep. A site we leave spotless. Discretion and reliability are part of the service — not a courtesy.
+          </p>
+          <div class="mt-8 flex items-center text-sm text-sage-600 opacity-0 group-hover:opacity-100 transition-opacity">
+            <span class="tracking-wide">Read more</span>
+            <svg class="ml-2" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="reveal group relative p-10 lg:p-12 rounded-3xl bg-mist hover:bg-sage-50 border border-transparent hover:border-sage-200/50 transition-all duration-500 min-h-[420px] flex flex-col">
+          <div class="w-12 h-12 rounded-2xl bg-white border border-sage-200/60 flex items-center justify-center mb-10 group-hover:scale-105 transition-transform">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5d8a5b" stroke-width="1.25"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 1 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <h3 class="text-2xl font-medium tracking-tight text-ink mb-3">Quietly Guaranteed</h3>
+          <p class="text-gray-500 text-[15px] leading-relaxed font-light flex-1">
+            Two-year workmanship guarantee on every engagement. If something settles unevenly, we return — without conversation.
+          </p>
+          <div class="mt-8 flex items-center text-sm text-sage-600 opacity-0 group-hover:opacity-100 transition-opacity">
+            <span class="tracking-wide">Read more</span>
+            <svg class="ml-2" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Full-width Garden Image -->
+  <section class="relative h-[80vh] min-h-[600px] w-full overflow-hidden">
+    <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=2400&q=80" alt="Manicured garden" class="w-full h-full object-cover parallax" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 inset-x-0 p-10 lg:p-20">
+      <div class="max-w-7xl mx-auto">
+        <div class="reveal max-w-2xl">
+          <p class="text-white/80 text-xs tracking-[0.35em] uppercase mb-5">Living architecture</p>
+          <h2 class="text-white text-4xl md:text-6xl tracking-tightest font-light leading-[1.05]">
+            Gardens that breathe with the seasons.
+          </h2>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Tiles (Bento Variation) -->
+  <section class="py-28 md:py-40 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="reveal flex flex-col md:flex-row md:items-end md:justify-between mb-16 gap-6">
+        <div>
+          <p class="text-sage-600 text-xs tracking-[0.35em] uppercase mb-4">Capabilities</p>
+          <h2 class="text-4xl md:text-5xl tracking-tightest font-light text-ink">A complete repertoire.</h2>
+        </div>
+        <a href="./services.html" class="inline-flex items-center gap-2 text-sm text-ink/70 hover:text-ink transition-colors">
+          All services
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-6 gap-5 auto-rows-[260px]">
+        <a href="./services.html" class="reveal group md:col-span-3 md:row-span-2 relative rounded-3xl overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1600&q=80" alt="Tile painting" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+          <div class="absolute bottom-0 p-8">
+            <p class="text-white/60 text-[10px] tracking-[0.3em] uppercase">01</p>
+            <h3 class="text-white text-3xl md:text-4xl tracking-tight font-light mt-2">Tile painting</h3>
+            <p class="text-white/70 text-sm mt-2 max-w-sm">Mineral-bonded finishes for floors that read as new.</p>
+          </div>
+        </a>
+        <a href="./services.html" class="reveal group md:col-span-3 relative rounded-3xl overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1558635924-b60ccf18352f?auto=format&fit=crop&w=1600&q=80" alt="Patio cleaning" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent"></div>
+          <div class="absolute bottom-0 p-8">
+            <p class="text-white/60 text-[10px] tracking-[0.3em] uppercase">02</p>
+            <h3 class="text-white text-2xl tracking-tight font-light mt-2">Patio cleaning</h3>
+          </div>
+        </a>
+        <a href="./services.html" class="reveal group md:col-span-2 relative rounded-3xl overflow-hidden bg-mist p-7 flex flex-col justify-between">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#5d8a5b" stroke-width="1.25"><path d="M3 21c0-4 3-7 7-7h4c4 0 7 3 7 7M12 4v10M9 7l3-3 3 3"/></svg>
+          <div>
+            <p class="text-ink/40 text-[10px] tracking-[0.3em] uppercase">03</p>
+            <h3 class="text-ink text-xl tracking-tight font-medium mt-2">Gardening</h3>
+          </div>
+        </a>
+        <a href="./services.html" class="reveal group relative rounded-3xl overflow-hidden bg-sage-50 p-7 flex flex-col justify-between">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#5d8a5b" stroke-width="1.25"><path d="M14.7 6.3a3 3 0 1 0 4.24 4.24L21 8.5l-4.5-4.5-1.8 2.3zM5 19l8-8"/></svg>
+          <div>
+            <p class="text-ink/40 text-[10px] tracking-[0.3em] uppercase">04</p>
+            <h3 class="text-ink text-xl tracking-tight font-medium mt-2">Minor repairs</h3>
+          </div>
+        </a>
+        <a href="./services.html" class="reveal group md:col-span-3 relative rounded-3xl overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1616046229478-9901c5536a45?auto=format&fit=crop&w=1600&q=80" alt="Wallpapering" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent"></div>
+          <div class="absolute bottom-0 p-8">
+            <p class="text-white/60 text-[10px] tracking-[0.3em] uppercase">05</p>
+            <h3 class="text-white text-2xl tracking-tight font-light mt-2">Wallpapering</h3>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section id="process" class="py-28 md:py-40 bg-mist/60">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="reveal max-w-3xl mb-20">
+        <p class="text-sage-600 text-xs tracking-[0.35em] uppercase mb-4">The process</p>
+        <h2 class="text-4xl md:text-5xl tracking-tightest font-light text-ink leading-tight">
+          From first call to final inspection — three deliberate steps.
+        </h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-10 md:gap-16">
+        <div class="reveal">
+          <div class="text-sage-500 text-sm tracking-[0.3em] mb-6">01 / Consult</div>
+          <h3 class="text-2xl font-medium tracking-tight mb-3">A measured conversation</h3>
+          <p class="text-gray-500 text-[15px] leading-relaxed font-light">We walk the property, listen carefully, and document every surface that matters to you.</p>
+        </div>
+        <div class="reveal">
+          <div class="text-sage-500 text-sm tracking-[0.3em] mb-6">02 / Compose</div>
+          <h3 class="text-2xl font-medium tracking-tight mb-3">A transparent proposal</h3>
+          <p class="text-gray-500 text-[15px] leading-relaxed font-light">Fixed pricing, named materials, and a calendar window — sent within 48 hours.</p>
+        </div>
+        <div class="reveal">
+          <div class="text-sage-500 text-sm tracking-[0.3em] mb-6">03 / Craft</div>
+          <h3 class="text-2xl font-medium tracking-tight mb-3">Work that disappears</h3>
+          <p class="text-gray-500 text-[15px] leading-relaxed font-light">Quiet hours, contained mess, and a finished space that looks as if nothing was ever wrong.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Eligibility / Contact CTA -->
+  <section id="eligibility" class="py-28 md:py-40 bg-white">
+    <div class="max-w-3xl mx-auto px-6 lg:px-10">
+      <div class="reveal text-center mb-14">
+        <p class="text-sage-600 text-xs tracking-[0.35em] uppercase mb-4">Eligibility test</p>
+        <h2 class="text-4xl md:text-5xl tracking-tightest font-light text-ink leading-tight">
+          See if your project<br/>fits our calendar.
+        </h2>
+        <p class="text-gray-500 mt-6 font-light max-w-lg mx-auto">
+          A 30-second form. No commitment. A real reply within one business day.
+        </p>
+      </div>
+
+      <form id="eligibilityForm" class="reveal space-y-8">
+        <div class="grid md:grid-cols-2 gap-6">
+          <label class="block">
+            <span class="text-xs tracking-[0.2em] uppercase text-ink/50">Full name</span>
+            <input type="text" required class="mt-3 w-full bg-transparent border-b border-ink/15 focus:border-sage-500 outline-none py-3 text-ink font-light transition-colors" placeholder="Camille Laurent" />
+          </label>
+          <label class="block">
+            <span class="text-xs tracking-[0.2em] uppercase text-ink/50">Email</span>
+            <input type="email" required class="mt-3 w-full bg-transparent border-b border-ink/15 focus:border-sage-500 outline-none py-3 text-ink font-light transition-colors" placeholder="you@domain.com" />
+          </label>
+        </div>
+
+        <label class="block">
+          <span class="text-xs tracking-[0.2em] uppercase text-ink/50">Service needed</span>
+          <select required class="mt-3 w-full bg-transparent border-b border-ink/15 focus:border-sage-500 outline-none py-3 text-ink font-light transition-colors">
+            <option value="">Select a service…</option>
+            <option>Tile painting</option>
+            <option>Patio cleaning</option>
+            <option>Gardening</option>
+            <option>Minor repairs</option>
+            <option>Wallpapering</option>
+            <option>Multiple / Other</option>
+          </select>
+        </label>
+
+        <label class="block">
+          <span class="text-xs tracking-[0.2em] uppercase text-ink/50">A few words about the project</span>
+          <textarea rows="3" class="mt-3 w-full bg-transparent border-b border-ink/15 focus:border-sage-500 outline-none py-3 text-ink font-light transition-colors resize-none" placeholder="Surface, square metres, deadlines…"></textarea>
+        </label>
+
+        <div class="pt-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
+          <p class="text-xs text-ink/40 font-light">Your information stays with us. Always.</p>
+          <button type="submit" class="cta-glow group inline-flex items-center gap-3 px-8 py-4 rounded-full bg-sage-500/95 hover:bg-sage-600 text-white text-sm tracking-wide transition-all">
+            Request a Free Quote
+            <svg class="transition-transform group-hover:translate-x-1" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+        <p id="formSuccess" class="hidden text-sage-600 text-sm pt-4">Thank you — we've received your request and will reply within one business day.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-ink/5 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 py-16 grid md:grid-cols-4 gap-10">
+      <div class="md:col-span-2">
+        <a href="./index.html" class="flex items-center gap-2">
+          <span class="w-7 h-7 rounded-full border border-ink/15 flex items-center justify-center">
+            <span class="w-2 h-2 rounded-full bg-sage-400"></span>
+          </span>
+          <span class="text-ink font-medium tracking-tight">Vandal Multiservices</span>
+        </a>
+        <p class="text-gray-500 text-sm mt-4 max-w-sm font-light leading-relaxed">
+          Refined home services delivered with the quiet rigour of a craftsman's atelier.
+        </p>
+      </div>
+      <div>
+        <p class="text-xs tracking-[0.25em] uppercase text-ink/40 mb-4">Navigate</p>
+        <ul class="space-y-3 text-sm text-ink/70 font-light">
+          <li><a href="./services.html" class="hover:text-ink">Services</a></li>
+          <li><a href="./about.html" class="hover:text-ink">About</a></li>
+          <li><a href="./contact.html" class="hover:text-ink">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-xs tracking-[0.25em] uppercase text-ink/40 mb-4">Contact</p>
+        <ul class="space-y-3 text-sm text-ink/70 font-light">
+          <li>hello@vandal-services.com</li>
+          <li>+33 1 84 80 00 00</li>
+          <li>Paris &amp; Île-de-France</li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-ink/5">
+      <div class="max-w-7xl mx-auto px-6 lg:px-10 py-6 flex flex-col md:flex-row md:items-center md:justify-between text-xs text-ink/40 font-light">
+        <p>© <span id="year"></span> Vandal Multiservices. All rights reserved.</p>
+        <p>Crafted with restraint.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./assets/script.js"></script>
+</body>
+</html>

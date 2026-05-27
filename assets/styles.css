@@ -1,0 +1,75 @@
+/* Vandal Multiservices — refinements layered atop Tailwind */
+
+html { scroll-behavior: smooth; }
+body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+
+/* Reveal-on-scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 1.05s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 1.05s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* CTA glow */
+.cta-glow {
+  position: relative;
+  box-shadow: 0 0 0 0 rgba(93, 138, 91, 0);
+  transition: box-shadow 0.6s ease, transform 0.4s ease, background-color 0.3s ease;
+}
+.cta-glow:hover {
+  transform: translateY(-1px);
+  box-shadow:
+    0 0 28px 4px rgba(130, 162, 128, 0.35),
+    0 0 60px 10px rgba(93, 138, 91, 0.18);
+}
+.cta-glow::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 9999px;
+  background: radial-gradient(circle at center, rgba(169, 192, 167, 0.4), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: -1;
+}
+.cta-glow:hover::after { opacity: 1; }
+
+/* Nav: scrolled state — toggles colour palette */
+#nav.scrolled,
+#nav.scrolled-light {
+  background-color: rgba(255, 255, 255, 0.78);
+  backdrop-filter: saturate(180%) blur(18px);
+  -webkit-backdrop-filter: saturate(180%) blur(18px);
+  border-bottom: 1px solid rgba(10, 10, 10, 0.05);
+}
+#nav.scrolled .text-white\/85,
+#nav.scrolled .text-white\/85:hover { color: rgba(10,10,10,0.7); }
+#nav.scrolled .text-white { color: #0a0a0a; }
+#nav.scrolled a.text-white\/85:hover { color: #0a0a0a; }
+#nav.scrolled .border-white\/60 { border-color: rgba(10,10,10,0.2); }
+#nav.scrolled .border-white\/25 { border-color: rgba(93, 138, 91, 0.3); }
+#nav.scrolled .bg-white\/10 { background-color: rgba(93, 138, 91, 0.1); color: #365538; }
+#nav.scrolled .bg-sage-300 { background-color: #5d8a5b; }
+
+/* Group-based variant for nav links (Tailwind .group-[.scrolled]) */
+#nav.scrolled { /* trigger class for `group` parent applied via inline group selectors */ }
+
+/* Form field placeholder colour */
+input::placeholder, textarea::placeholder { color: rgba(10,10,10,0.3); font-weight: 300; }
+select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230a0a0a' stroke-width='1.25'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 0.25rem center; background-size: 18px; padding-right: 2rem; }
+
+/* Parallax target */
+.parallax { will-change: transform; transition: transform 0.05s linear; }
+
+/* Selection */
+::selection { background: #cddacb; color: #243828; }
+
+/* Image fade-in */
+img { transition: opacity 0.8s ease; }
+img.loaded { opacity: 1; }

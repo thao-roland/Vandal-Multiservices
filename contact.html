@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Vandal Multiservices</title>
+  <meta name="description" content="Request a free quote, or simply a recommendation. We reply within one business day." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./assets/styles.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'] },
+          colors: {
+            sage: { 50:'#f4f7f4', 100:'#e6ede5', 200:'#cddacb', 300:'#a9c0a7', 400:'#82a280', 500:'#5d8a5b', 600:'#456b44', 700:'#365538', 800:'#2c4530', 900:'#243828' },
+            ink: '#0a0a0a', mist: '#f5f5f7',
+          },
+          letterSpacing: { tightest: '-0.045em' },
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-white text-ink font-sans antialiased">
+
+  <header id="nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-500 scrolled-light">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 py-5 flex items-center justify-between">
+      <a href="./index.html" class="flex items-center gap-2">
+        <span class="w-7 h-7 rounded-full border border-ink/20 flex items-center justify-center"><span class="w-2 h-2 rounded-full bg-sage-400"></span></span>
+        <span class="text-ink font-medium tracking-tight">Vandal</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-10 text-sm">
+        <a href="./services.html" class="text-ink/70 hover:text-ink">Services</a>
+        <a href="./about.html" class="text-ink/70 hover:text-ink">About</a>
+        <a href="./index.html#process" class="text-ink/70 hover:text-ink">Process</a>
+        <a href="./contact.html" class="text-ink">Contact</a>
+      </nav>
+      <a href="#form" class="hidden md:inline-flex items-center gap-2 text-sm px-5 py-2.5 rounded-full bg-sage-500/10 border border-sage-500/30 text-sage-700 hover:bg-sage-500/15 transition-all">
+        Free Quote
+        <span class="w-1.5 h-1.5 rounded-full bg-sage-500"></span>
+      </a>
+    </div>
+  </header>
+
+  <section class="pt-44 pb-16 md:pt-56 md:pb-24">
+    <div class="max-w-5xl mx-auto px-6 lg:px-10 text-center reveal">
+      <p class="text-sage-600 text-xs tracking-[0.35em] uppercase mb-6">Contact</p>
+      <h1 class="text-5xl md:text-7xl tracking-tightest font-light text-ink leading-[1.02]">
+        Tell us what your<br/>
+        <span class="text-gray-400 italic font-extralight">space needs.</span>
+      </h1>
+      <p class="mt-8 text-gray-500 text-lg max-w-xl mx-auto font-light leading-relaxed">
+        Every enquiry receives a thoughtful, hand-written reply within one business day. Often sooner.
+      </p>
+    </div>
+  </section>
+
+  <section id="form" class="pb-32">
+    <div class="max-w-3xl mx-auto px-6 lg:px-10">
+      <form id="eligibilityForm" class="reveal space-y-10 bg-mist/60 rounded-3xl p-8 md:p-14 border border-ink/5">
+        <div class="grid md:grid-cols-2 gap-8">
+          <label class="block">
+            <span class="text-xs tracking-[0.2em] uppercase text-ink/50">Full name</span>
+            <input type="text" required class="mt-3 w-full bg-transparent border-b border-ink/15 focus:border-sage-500 outline-none py-3 text-ink font-light transition-colors" placeholder="Camille Laurent" />
+          </label>
+          <label class="block">
+            <span class="text-xs tracking-[0.2em] uppercase text-ink/50">Email</span>
+            <input type="email" required class="mt-3 w-full bg-transparent border-b border-ink/15 focus:border-sage-500 outline-none py-3 text-ink font-light transition-colors" placeholder="you@domain.com" />
+          </label>
+          <label class="block">
+            <span class="text-xs tracking-[0.2em] uppercase text-ink/50">Phone</span>
+            <input type="tel" class="mt-3 w-full bg-transparent border-b border-ink/15 focus:border-sage-500 outline-none py-3 text-ink font-light transition-colors" placeholder="Optional" />
+          </label>
+          <label class="block">
+            <span class="text-xs tracking-[0.2em] uppercase text-ink/50">Postcode</span>
+            <input type="text" class="mt-3 w-full bg-transparent border-b border-ink/15 focus:border-sage-500 outline-none py-3 text-ink font-light transition-colors" placeholder="75007" />
+          </label>
+        </div>
+
+        <label class="block">
+          <span class="text-xs tracking-[0.2em] uppercase text-ink/50">Service needed</span>
+          <select required class="mt-3 w-full bg-transparent border-b border-ink/15 focus:border-sage-500 outline-none py-3 text-ink font-light transition-colors">
+            <option value="">Select a service…</option>
+            <option>Tile painting</option>
+            <option>Patio cleaning</option>
+            <option>Gardening</option>
+            <option>Minor repairs</option>
+            <option>Wallpapering</option>
+            <option>Interior painting</option>
+            <option>Multiple / Other</option>
+          </select>
+        </label>
+
+        <label class="block">
+          <span class="text-xs tracking-[0.2em] uppercase text-ink/50">A few words about the project</span>
+          <textarea rows="5" class="mt-3 w-full bg-transparent border-b border-ink/15 focus:border-sage-500 outline-none py-3 text-ink font-light transition-colors resize-none" placeholder="Surface, square metres, deadlines, anything we should know…"></textarea>
+        </label>
+
+        <div class="pt-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
+          <p class="text-xs text-ink/40 font-light">Your information stays with us. Always.</p>
+          <button type="submit" class="cta-glow group inline-flex items-center gap-3 px-8 py-4 rounded-full bg-sage-500/95 hover:bg-sage-600 text-white text-sm tracking-wide transition-all">
+            Request a Free Quote
+            <svg class="transition-transform group-hover:translate-x-1" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+        <p id="formSuccess" class="hidden text-sage-600 text-sm pt-4">Thank you — we've received your request and will reply within one business day.</p>
+      </form>
+
+      <div class="reveal mt-20 grid md:grid-cols-3 gap-8 text-center">
+        <div>
+          <p class="text-xs tracking-[0.25em] uppercase text-ink/40 mb-3">Email</p>
+          <p class="text-ink font-light">hello@vandal-services.com</p>
+        </div>
+        <div>
+          <p class="text-xs tracking-[0.25em] uppercase text-ink/40 mb-3">Telephone</p>
+          <p class="text-ink font-light">+33 1 84 80 00 00</p>
+        </div>
+        <div>
+          <p class="text-xs tracking-[0.25em] uppercase text-ink/40 mb-3">Atelier</p>
+          <p class="text-ink font-light">Paris &amp; Île-de-France</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="border-t border-ink/5 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 py-16 grid md:grid-cols-4 gap-10">
+      <div class="md:col-span-2">
+        <a href="./index.html" class="flex items-center gap-2">
+          <span class="w-7 h-7 rounded-full border border-ink/15 flex items-center justify-center"><span class="w-2 h-2 rounded-full bg-sage-400"></span></span>
+          <span class="text-ink font-medium tracking-tight">Vandal Multiservices</span>
+        </a>
+        <p class="text-gray-500 text-sm mt-4 max-w-sm font-light leading-relaxed">Refined home services delivered with the quiet rigour of a craftsman's atelier.</p>
+      </div>
+      <div>
+        <p class="text-xs tracking-[0.25em] uppercase text-ink/40 mb-4">Navigate</p>
+        <ul class="space-y-3 text-sm text-ink/70 font-light">
+          <li><a href="./services.html" class="hover:text-ink">Services</a></li>
+          <li><a href="./about.html" class="hover:text-ink">About</a></li>
+          <li><a href="./contact.html" class="hover:text-ink">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-xs tracking-[0.25em] uppercase text-ink/40 mb-4">Contact</p>
+        <ul class="space-y-3 text-sm text-ink/70 font-light">
+          <li>hello@vandal-services.com</li>
+          <li>+33 1 84 80 00 00</li>
+          <li>Paris &amp; Île-de-France</li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-ink/5">
+      <div class="max-w-7xl mx-auto px-6 lg:px-10 py-6 flex flex-col md:flex-row md:items-center md:justify-between text-xs text-ink/40 font-light">
+        <p>© <span id="year"></span> Vandal Multiservices. All rights reserved.</p>
+        <p>Crafted with restraint.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./assets/script.js"></script>
+</body>
+</html>

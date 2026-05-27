@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services — Vandal Multiservices</title>
+  <meta name="description" content="A complete repertoire of refined home services: tile painting, patio cleaning, gardening, minor repairs, and wallpapering." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./assets/styles.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'] },
+          colors: {
+            sage: { 50:'#f4f7f4', 100:'#e6ede5', 200:'#cddacb', 300:'#a9c0a7', 400:'#82a280', 500:'#5d8a5b', 600:'#456b44', 700:'#365538', 800:'#2c4530', 900:'#243828' },
+            ink: '#0a0a0a', mist: '#f5f5f7',
+          },
+          letterSpacing: { tightest: '-0.045em' },
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-white text-ink font-sans antialiased">
+
+  <!-- Navigation (light variant) -->
+  <header id="nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-500 scrolled-light">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 py-5 flex items-center justify-between">
+      <a href="./index.html" class="flex items-center gap-2">
+        <span class="w-7 h-7 rounded-full border border-ink/20 flex items-center justify-center">
+          <span class="w-2 h-2 rounded-full bg-sage-400"></span>
+        </span>
+        <span class="text-ink font-medium tracking-tight">Vandal</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-10 text-sm">
+        <a href="./services.html" class="text-ink hover:text-ink">Services</a>
+        <a href="./about.html"    class="text-ink/70 hover:text-ink">About</a>
+        <a href="./index.html#process" class="text-ink/70 hover:text-ink">Process</a>
+        <a href="./contact.html"  class="text-ink/70 hover:text-ink">Contact</a>
+      </nav>
+      <a href="./contact.html" class="hidden md:inline-flex items-center gap-2 text-sm px-5 py-2.5 rounded-full bg-sage-500/10 border border-sage-500/30 text-sage-700 hover:bg-sage-500/15 transition-all">
+        Free Quote
+        <span class="w-1.5 h-1.5 rounded-full bg-sage-500"></span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Header section -->
+  <section class="pt-44 pb-20 md:pt-56 md:pb-28">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="reveal max-w-4xl">
+        <p class="text-sage-600 text-xs tracking-[0.35em] uppercase mb-6">Services</p>
+        <h1 class="text-5xl md:text-7xl tracking-tightest font-light text-ink leading-[1.02]">
+          One atelier.<br/>
+          <span class="text-gray-400 italic font-extralight">Every discipline.</span>
+        </h1>
+        <p class="mt-8 text-gray-500 text-lg max-w-xl font-light leading-relaxed">
+          Six disciplines, performed in-house by the same small team of artisans — so the standard never drifts between trades.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services list -->
+  <section class="pb-32">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 space-y-5">
+      <!-- Service item -->
+      <article class="reveal group grid md:grid-cols-12 gap-6 items-center rounded-3xl overflow-hidden bg-mist hover:bg-sage-50 transition-colors duration-500">
+        <div class="md:col-span-5 relative h-72 md:h-96">
+          <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1400&q=80" alt="Tile painting" class="absolute inset-0 w-full h-full object-cover"/>
+        </div>
+        <div class="md:col-span-7 p-8 md:p-14">
+          <div class="flex items-center gap-3 mb-5">
+            <span class="text-xs tracking-[0.3em] text-sage-600">01</span>
+            <span class="h-px w-10 bg-sage-300"></span>
+          </div>
+          <h2 class="text-3xl md:text-5xl tracking-tightest font-light text-ink">Tile painting</h2>
+          <p class="mt-5 text-gray-500 font-light leading-relaxed max-w-xl">
+            Mineral-bonded coatings restore worn tile to a uniform, durable finish — at a fraction of the cost of replacement, with none of the disruption.
+          </p>
+          <ul class="mt-8 grid grid-cols-2 gap-3 text-sm text-ink/70 font-light max-w-md">
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sage-400"></span>Mineral primers</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sage-400"></span>Slip-rated finish</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sage-400"></span>48-hour cure</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sage-400"></span>2-year warranty</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="reveal group grid md:grid-cols-12 gap-6 items-center rounded-3xl overflow-hidden bg-mist hover:bg-sage-50 transition-colors duration-500">
+        <div class="md:col-span-7 p-8 md:p-14 order-2 md:order-1">
+          <div class="flex items-center gap-3 mb-5">
+            <span class="text-xs tracking-[0.3em] text-sage-600">02</span>
+            <span class="h-px w-10 bg-sage-300"></span>
+          </div>
+          <h2 class="text-3xl md:text-5xl tracking-tightest font-light text-ink">Patio cleaning</h2>
+          <p class="mt-5 text-gray-500 font-light leading-relaxed max-w-xl">
+            Low-pressure, biodegradable treatments lift years of organic build-up from natural stone, terracotta and composite decking — without etching.
+          </p>
+          <ul class="mt-8 grid grid-cols-2 gap-3 text-sm text-ink/70 font-light max-w-md">
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sage-400"></span>Soft-wash technique</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sage-400"></span>Plant-safe</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sage-400"></span>Joint re-sanding</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sage-400"></span>Sealer optional</li>
+          </ul>
+        </div>
+        <div class="md:col-span-5 relative h-72 md:h-96 order-1 md:order-2">
+          <img src="https://images.unsplash.com/photo-1558635924-b60ccf18352f?auto=format&fit=crop&w=1400&q=80" alt="Patio cleaning" class="absolute inset-0 w-full h-full object-cover"/>
+        </div>
+      </article>
+
+      <article class="reveal group grid md:grid-cols-12 gap-6 items-center rounded-3xl overflow-hidden bg-mist hover:bg-sage-50 transition-colors duration-500">
+        <div class="md:col-span-5 relative h-72 md:h-96">
+          <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=1400&q=80" alt="Gardening" class="absolute inset-0 w-full h-full object-cover"/>
+        </div>
+        <div class="md:col-span-7 p-8 md:p-14">
+          <div class="flex items-center gap-3 mb-5">
+            <span class="text-xs tracking-[0.3em] text-sage-600">03</span>
+            <span class="h-px w-10 bg-sage-300"></span>
+          </div>
+          <h2 class="text-3xl md:text-5xl tracking-tightest font-light text-ink">Gardening</h2>
+          <p class="mt-5 text-gray-500 font-light leading-relaxed max-w-xl">
+            Seasonal pruning, lawn restoration, hedge sculpting and discreet upkeep — composed so the garden looks deliberate, never groomed.
+          </p>
+          <ul class="mt-8 grid grid-cols-2 gap-3 text-sm text-ink/70 font-light max-w-md">
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sage-400"></span>Year-round care</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sage-400"></span>Composted on-site</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sage-400"></span>Battery tooling</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sage-400"></span>Subscription option</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="reveal group grid md:grid-cols-12 gap-6 items-center rounded-3xl overflow-hidden bg-mist hover:bg-sage-50 transition-colors duration-500">
+        <div class="md:col-span-7 p-8 md:p-14 order-2 md:order-1">
+          <div class="flex items-center gap-3 mb-5">
+            <span class="text-xs tracking-[0.3em] text-sage-600">04</span>
+            <span class="h-px w-10 bg-sage-300"></span>
+          </div>
+          <h2 class="text-3xl md:text-5xl tracking-tightest font-light text-ink">Minor repairs</h2>
+          <p class="mt-5 text-gray-500 font-light leading-relaxed max-w-xl">
+            The squeaks, scuffs and small surrenders of a home — addressed in a single, well-prepared visit by a single, experienced technician.
+          </p>
+          <ul class="mt-8 grid grid-cols-2 gap-3 text-sm text-ink/70 font-light max-w-md">
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sage-400"></span>Doors &amp; hinges</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sage-400"></span>Plaster touch-ups</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sage-400"></span>Light fixtures</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sage-400"></span>Silicone joints</li>
+          </ul>
+        </div>
+        <div class="md:col-span-5 relative h-72 md:h-96 order-1 md:order-2">
+          <img src="https://images.unsplash.com/photo-1572297794905-3b58d18f06bd?auto=format&fit=crop&w=1400&q=80" alt="Minor repairs" class="absolute inset-0 w-full h-full object-cover"/>
+        </div>
+      </article>
+
+      <article class="reveal group grid md:grid-cols-12 gap-6 items-center rounded-3xl overflow-hidden bg-mist hover:bg-sage-50 transition-colors duration-500">
+        <div class="md:col-span-5 relative h-72 md:h-96">
+          <img src="https://images.unsplash.com/photo-1616046229478-9901c5536a45?auto=format&fit=crop&w=1400&q=80" alt="Wallpapering" class="absolute inset-0 w-full h-full object-cover"/>
+        </div>
+        <div class="md:col-span-7 p-8 md:p-14">
+          <div class="flex items-center gap-3 mb-5">
+            <span class="text-xs tracking-[0.3em] text-sage-600">05</span>
+            <span class="h-px w-10 bg-sage-300"></span>
+          </div>
+          <h2 class="text-3xl md:text-5xl tracking-tightest font-light text-ink">Wallpapering</h2>
+          <p class="mt-5 text-gray-500 font-light leading-relaxed max-w-xl">
+            From hand-blocked papers to wide-format murals, joints align, patterns repeat, and corners disappear. Application that honours the paper.
+          </p>
+          <ul class="mt-8 grid grid-cols-2 gap-3 text-sm text-ink/70 font-light max-w-md">
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sage-400"></span>Wall prep included</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sage-400"></span>Specialty papers</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sage-400"></span>Mural alignment</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sage-400"></span>Trim removal</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="reveal group grid md:grid-cols-12 gap-6 items-center rounded-3xl overflow-hidden bg-mist hover:bg-sage-50 transition-colors duration-500">
+        <div class="md:col-span-7 p-8 md:p-14 order-2 md:order-1">
+          <div class="flex items-center gap-3 mb-5">
+            <span class="text-xs tracking-[0.3em] text-sage-600">06</span>
+            <span class="h-px w-10 bg-sage-300"></span>
+          </div>
+          <h2 class="text-3xl md:text-5xl tracking-tightest font-light text-ink">Interior painting</h2>
+          <p class="mt-5 text-gray-500 font-light leading-relaxed max-w-xl">
+            Low-VOC mineral and chalk paints, applied in calibrated layers. Quiet sites, masked floors, sharp lines — a finish that reads as architecture.
+          </p>
+          <ul class="mt-8 grid grid-cols-2 gap-3 text-sm text-ink/70 font-light max-w-md">
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sage-400"></span>Low-VOC paints</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sage-400"></span>Colour consultation</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sage-400"></span>Furniture handling</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sage-400"></span>Clean-up included</li>
+          </ul>
+        </div>
+        <div class="md:col-span-5 relative h-72 md:h-96 order-1 md:order-2">
+          <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=1400&q=80" alt="Interior painting" class="absolute inset-0 w-full h-full object-cover"/>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-28 md:py-36 bg-mist/60">
+    <div class="max-w-4xl mx-auto px-6 lg:px-10 text-center reveal">
+      <h2 class="text-4xl md:text-6xl tracking-tightest font-light text-ink leading-tight">Ready when you are.</h2>
+      <p class="text-gray-500 mt-6 font-light max-w-lg mx-auto">Tell us what your space needs. We'll send a proposal — or simply a recommendation.</p>
+      <a href="./contact.html" class="cta-glow mt-10 inline-flex items-center gap-3 px-8 py-4 rounded-full bg-sage-500/95 hover:bg-sage-600 text-white text-sm tracking-wide transition-all">
+        Request a Free Quote
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-ink/5 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 py-16 grid md:grid-cols-4 gap-10">
+      <div class="md:col-span-2">
+        <a href="./index.html" class="flex items-center gap-2">
+          <span class="w-7 h-7 rounded-full border border-ink/15 flex items-center justify-center"><span class="w-2 h-2 rounded-full bg-sage-400"></span></span>
+          <span class="text-ink font-medium tracking-tight">Vandal Multiservices</span>
+        </a>
+        <p class="text-gray-500 text-sm mt-4 max-w-sm font-light leading-relaxed">Refined home services delivered with the quiet rigour of a craftsman's atelier.</p>
+      </div>
+      <div>
+        <p class="text-xs tracking-[0.25em] uppercase text-ink/40 mb-4">Navigate</p>
+        <ul class="space-y-3 text-sm text-ink/70 font-light">
+          <li><a href="./services.html" class="hover:text-ink">Services</a></li>
+          <li><a href="./about.html" class="hover:text-ink">About</a></li>
+          <li><a href="./contact.html" class="hover:text-ink">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-xs tracking-[0.25em] uppercase text-ink/40 mb-4">Contact</p>
+        <ul class="space-y-3 text-sm text-ink/70 font-light">
+          <li>hello@vandal-services.com</li>
+          <li>+33 1 84 80 00 00</li>
+          <li>Paris &amp; Île-de-France</li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-ink/5">
+      <div class="max-w-7xl mx-auto px-6 lg:px-10 py-6 flex flex-col md:flex-row md:items-center md:justify-between text-xs text-ink/40 font-light">
+        <p>© <span id="year"></span> Vandal Multiservices. All rights reserved.</p>
+        <p>Crafted with restraint.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./assets/script.js"></script>
+</body>
+</html>
