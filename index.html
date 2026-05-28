@@ -37,10 +37,10 @@
         </span>
         <span class="text-white group-[.scrolled]:text-ink font-medium tracking-tight transition-colors">Vandal</span>
       </a>
-      <nav class="hidden md:flex items-center gap-10 text-sm">
+      <nav class="hidden md:flex items-center gap-9 text-sm">
         <a href="./services.html" class="text-white/85 hover:text-white group-[.scrolled]:text-ink/70 group-[.scrolled]:hover:text-ink transition-colors">Prestations</a>
+        <a href="./realisations.html" class="text-white/85 hover:text-white group-[.scrolled]:text-ink/70 group-[.scrolled]:hover:text-ink transition-colors">Réalisations</a>
         <a href="./about.html"    class="text-white/85 hover:text-white group-[.scrolled]:text-ink/70 group-[.scrolled]:hover:text-ink transition-colors">À propos</a>
-        <a href="#process"        class="text-white/85 hover:text-white group-[.scrolled]:text-ink/70 group-[.scrolled]:hover:text-ink transition-colors">Méthode</a>
         <a href="./contact.html"  class="text-white/85 hover:text-white group-[.scrolled]:text-ink/70 group-[.scrolled]:hover:text-ink transition-colors">Contact</a>
       </nav>
       <a href="./contact.html" class="hidden md:inline-flex items-center gap-2 text-sm px-5 py-2.5 rounded-full bg-white/10 backdrop-blur-md border border-white/25 text-white hover:bg-white/20 group-[.scrolled]:bg-sage-500/10 group-[.scrolled]:border-sage-500/30 group-[.scrolled]:text-sage-700 transition-all">
@@ -54,8 +54,8 @@
     <div id="mobileMenu" class="md:hidden hidden bg-white/95 backdrop-blur-lg border-t border-ink/5">
       <div class="px-6 py-6 flex flex-col gap-4 text-ink">
         <a href="./services.html">Prestations</a>
+        <a href="./realisations.html">Réalisations</a>
         <a href="./about.html">À propos</a>
-        <a href="#process">Méthode</a>
         <a href="./contact.html">Contact</a>
         <a href="./contact.html" class="mt-2 inline-flex items-center justify-center px-5 py-3 rounded-full bg-sage-500 text-white">Demander un devis gratuit</a>
       </div>
@@ -85,7 +85,7 @@
             Demander un devis gratuit
             <svg class="transition-transform group-hover:translate-x-1" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
           </a>
-          <a href="#services" class="text-white/70 hover:text-white text-sm tracking-wide inline-flex items-center gap-2 px-2 py-4">
+          <a href="./services.html" class="text-white/70 hover:text-white text-sm tracking-wide inline-flex items-center gap-2 px-2 py-4">
             Découvrir nos prestations
           </a>
         </div>
@@ -174,7 +174,7 @@
     </div>
   </section>
 
-  <!-- Service Tiles (Bento Variation) -->
+  <!-- Services teaser -->
   <section class="py-28 md:py-40 bg-white">
     <div class="max-w-7xl mx-auto px-6 lg:px-10">
       <div class="reveal flex flex-col md:flex-row md:items-end md:justify-between mb-16 gap-6">
@@ -188,131 +188,54 @@
         </a>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-6 gap-5 auto-rows-[260px]">
-        <a href="./services.html" class="reveal group md:col-span-3 md:row-span-2 relative rounded-3xl overflow-hidden">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <a href="./services.html" class="reveal group relative rounded-3xl overflow-hidden h-96">
           <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1600&q=80" alt="Peinture sur carrelage" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"/>
           <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
           <div class="absolute bottom-0 p-8">
-            <p class="text-white/60 text-[10px] tracking-[0.3em] uppercase">01</p>
-            <h3 class="text-white text-3xl md:text-4xl tracking-tight font-light mt-2">Peinture sur carrelage</h3>
-            <p class="text-white/70 text-sm mt-2 max-w-sm">Finitions minérales pour des sols qui semblent neufs.</p>
+            <p class="text-white/60 text-[10px] tracking-[0.3em] uppercase">Surfaces</p>
+            <h3 class="text-white text-2xl tracking-tight font-light mt-2">Carrelage &amp; terrasses</h3>
           </div>
         </a>
-        <a href="./services.html" class="reveal group md:col-span-3 relative rounded-3xl overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1558635924-b60ccf18352f?auto=format&fit=crop&w=1600&q=80" alt="Nettoyage de terrasse" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"/>
-          <div class="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent"></div>
+        <a href="./services.html" class="reveal group relative rounded-3xl overflow-hidden h-96">
+          <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=1600&q=80" alt="Jardinage" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
           <div class="absolute bottom-0 p-8">
-            <p class="text-white/60 text-[10px] tracking-[0.3em] uppercase">02</p>
-            <h3 class="text-white text-2xl tracking-tight font-light mt-2">Nettoyage de terrasse</h3>
+            <p class="text-white/60 text-[10px] tracking-[0.3em] uppercase">Extérieur</p>
+            <h3 class="text-white text-2xl tracking-tight font-light mt-2">Jardinage &amp; entretien</h3>
           </div>
         </a>
-        <a href="./services.html" class="reveal group md:col-span-2 relative rounded-3xl overflow-hidden bg-mist p-7 flex flex-col justify-between">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#5d8a5b" stroke-width="1.25"><path d="M3 21c0-4 3-7 7-7h4c4 0 7 3 7 7M12 4v10M9 7l3-3 3 3"/></svg>
-          <div>
-            <p class="text-ink/40 text-[10px] tracking-[0.3em] uppercase">03</p>
-            <h3 class="text-ink text-xl tracking-tight font-medium mt-2">Jardinage</h3>
-          </div>
-        </a>
-        <a href="./services.html" class="reveal group relative rounded-3xl overflow-hidden bg-sage-50 p-7 flex flex-col justify-between">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#5d8a5b" stroke-width="1.25"><path d="M14.7 6.3a3 3 0 1 0 4.24 4.24L21 8.5l-4.5-4.5-1.8 2.3zM5 19l8-8"/></svg>
-          <div>
-            <p class="text-ink/40 text-[10px] tracking-[0.3em] uppercase">04</p>
-            <h3 class="text-ink text-xl tracking-tight font-medium mt-2">Petites réparations</h3>
-          </div>
-        </a>
-        <a href="./services.html" class="reveal group md:col-span-3 relative rounded-3xl overflow-hidden">
+        <a href="./services.html" class="reveal group relative rounded-3xl overflow-hidden h-96">
           <img src="https://images.unsplash.com/photo-1616046229478-9901c5536a45?auto=format&fit=crop&w=1600&q=80" alt="Tapisserie" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"/>
-          <div class="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
           <div class="absolute bottom-0 p-8">
-            <p class="text-white/60 text-[10px] tracking-[0.3em] uppercase">05</p>
-            <h3 class="text-white text-2xl tracking-tight font-light mt-2">Tapisserie</h3>
+            <p class="text-white/60 text-[10px] tracking-[0.3em] uppercase">Intérieur</p>
+            <h3 class="text-white text-2xl tracking-tight font-light mt-2">Tapisserie &amp; réparations</h3>
           </div>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- Process -->
-  <section id="process" class="py-28 md:py-40 bg-mist/60">
-    <div class="max-w-7xl mx-auto px-6 lg:px-10">
-      <div class="reveal max-w-3xl mb-20">
-        <p class="text-sage-600 text-xs tracking-[0.35em] uppercase mb-4">La méthode</p>
-        <h2 class="text-4xl md:text-5xl tracking-tightest font-light text-ink leading-tight">
-          Du premier appel à l'inspection finale — trois étapes mesurées.
-        </h2>
+  <!-- CTA band -->
+  <section class="py-28 md:py-40 bg-mist/60">
+    <div class="max-w-4xl mx-auto px-6 lg:px-10 text-center reveal">
+      <p class="text-sage-600 text-xs tracking-[0.35em] uppercase mb-5">Commencer</p>
+      <h2 class="text-4xl md:text-6xl tracking-tightest font-light text-ink leading-tight">
+        Un devis gratuit,<br/>une réponse sous 48 heures.
+      </h2>
+      <p class="text-gray-500 mt-6 font-light max-w-lg mx-auto">
+        Dites-nous ce dont vos espaces ont besoin. Nous vous répondons personnellement, sans engagement.
+      </p>
+      <div class="mt-10 flex flex-wrap gap-4 justify-center">
+        <a href="./contact.html" class="cta-glow group inline-flex items-center gap-3 px-8 py-4 rounded-full bg-sage-500/95 hover:bg-sage-600 text-white text-sm tracking-wide transition-all">
+          Demander un devis gratuit
+          <svg class="transition-transform group-hover:translate-x-1" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="./realisations.html" class="inline-flex items-center gap-2 text-sm text-ink/70 hover:text-ink px-4 py-4 transition-colors">
+          Voir nos réalisations
+        </a>
       </div>
-      <div class="grid md:grid-cols-3 gap-10 md:gap-16">
-        <div class="reveal">
-          <div class="text-sage-500 text-sm tracking-[0.3em] mb-6">01 / Consultation</div>
-          <h3 class="text-2xl font-medium tracking-tight mb-3">Un échange posé</h3>
-          <p class="text-gray-500 text-[15px] leading-relaxed font-light">Nous visitons les lieux, écoutons attentivement et relevons chaque surface qui vous tient à cœur.</p>
-        </div>
-        <div class="reveal">
-          <div class="text-sage-500 text-sm tracking-[0.3em] mb-6">02 / Proposition</div>
-          <h3 class="text-2xl font-medium tracking-tight mb-3">Un devis transparent</h3>
-          <p class="text-gray-500 text-[15px] leading-relaxed font-light">Prix ferme, matériaux nommés, créneau précis — envoyés sous 48 heures.</p>
-        </div>
-        <div class="reveal">
-          <div class="text-sage-500 text-sm tracking-[0.3em] mb-6">03 / Réalisation</div>
-          <h3 class="text-2xl font-medium tracking-tight mb-3">Un travail qui s'efface</h3>
-          <p class="text-gray-500 text-[15px] leading-relaxed font-light">Horaires discrets, propreté maîtrisée, un espace terminé comme si rien n'avait jamais cloché.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Eligibility / Contact CTA -->
-  <section id="eligibility" class="py-28 md:py-40 bg-white">
-    <div class="max-w-3xl mx-auto px-6 lg:px-10">
-      <div class="reveal text-center mb-14">
-        <p class="text-sage-600 text-xs tracking-[0.35em] uppercase mb-4">Test d'éligibilité</p>
-        <h2 class="text-4xl md:text-5xl tracking-tightest font-light text-ink leading-tight">
-          Vérifiez si votre projet<br/>entre dans notre calendrier.
-        </h2>
-        <p class="text-gray-500 mt-6 font-light max-w-lg mx-auto">
-          Un formulaire de 30 secondes. Sans engagement. Une vraie réponse sous un jour ouvré.
-        </p>
-      </div>
-
-      <form id="eligibilityForm" class="reveal space-y-8">
-        <div class="grid md:grid-cols-2 gap-6">
-          <label class="block">
-            <span class="text-xs tracking-[0.2em] uppercase text-ink/50">Nom complet</span>
-            <input type="text" required class="mt-3 w-full bg-transparent border-b border-ink/15 focus:border-sage-500 outline-none py-3 text-ink font-light transition-colors" placeholder="Camille Laurent" />
-          </label>
-          <label class="block">
-            <span class="text-xs tracking-[0.2em] uppercase text-ink/50">E-mail</span>
-            <input type="email" required class="mt-3 w-full bg-transparent border-b border-ink/15 focus:border-sage-500 outline-none py-3 text-ink font-light transition-colors" placeholder="vous@domaine.com" />
-          </label>
-        </div>
-
-        <label class="block">
-          <span class="text-xs tracking-[0.2em] uppercase text-ink/50">Prestation souhaitée</span>
-          <select required class="mt-3 w-full bg-transparent border-b border-ink/15 focus:border-sage-500 outline-none py-3 text-ink font-light transition-colors">
-            <option value="">Choisissez une prestation…</option>
-            <option>Peinture sur carrelage</option>
-            <option>Nettoyage de terrasse</option>
-            <option>Jardinage</option>
-            <option>Petites réparations</option>
-            <option>Tapisserie</option>
-            <option>Plusieurs / Autre</option>
-          </select>
-        </label>
-
-        <label class="block">
-          <span class="text-xs tracking-[0.2em] uppercase text-ink/50">Quelques mots sur le projet</span>
-          <textarea rows="3" class="mt-3 w-full bg-transparent border-b border-ink/15 focus:border-sage-500 outline-none py-3 text-ink font-light transition-colors resize-none" placeholder="Surface, mètres carrés, délais…"></textarea>
-        </label>
-
-        <div class="pt-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
-          <p class="text-xs text-ink/40 font-light">Vos informations restent chez nous. Toujours.</p>
-          <button type="submit" class="cta-glow group inline-flex items-center gap-3 px-8 py-4 rounded-full bg-sage-500/95 hover:bg-sage-600 text-white text-sm tracking-wide transition-all">
-            Demander un devis gratuit
-            <svg class="transition-transform group-hover:translate-x-1" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-          </button>
-        </div>
-        <p id="formSuccess" class="hidden text-sage-600 text-sm pt-4">Merci — nous avons bien reçu votre demande et vous répondrons sous un jour ouvré.</p>
-      </form>
     </div>
   </section>
 
@@ -334,6 +257,7 @@
         <p class="text-xs tracking-[0.25em] uppercase text-ink/40 mb-4">Navigation</p>
         <ul class="space-y-3 text-sm text-ink/70 font-light">
           <li><a href="./services.html" class="hover:text-ink">Prestations</a></li>
+          <li><a href="./realisations.html" class="hover:text-ink">Réalisations</a></li>
           <li><a href="./about.html" class="hover:text-ink">À propos</a></li>
           <li><a href="./contact.html" class="hover:text-ink">Contact</a></li>
         </ul>

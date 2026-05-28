@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Réalisations — Vandal Multiservices</title>
+  <meta name="description" content="Une sélection de chantiers menés par Vandal Multiservices : carrelage restauré, terrasses ravivées, jardins ciselés et intérieurs repensés." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./assets/styles.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'] },
+          colors: {
+            sage: { 50:'#f4f7f4', 100:'#e6ede5', 200:'#cddacb', 300:'#a9c0a7', 400:'#82a280', 500:'#5d8a5b', 600:'#456b44', 700:'#365538', 800:'#2c4530', 900:'#243828' },
+            ink: '#0a0a0a', mist: '#f5f5f7',
+          },
+          letterSpacing: { tightest: '-0.045em' },
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-white text-ink font-sans antialiased">
+
+  <header id="nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-500 scrolled-light">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 py-5 flex items-center justify-between">
+      <a href="./index.html" class="flex items-center gap-2">
+        <span class="w-7 h-7 rounded-full border border-ink/20 flex items-center justify-center"><span class="w-2 h-2 rounded-full bg-sage-400"></span></span>
+        <span class="text-ink font-medium tracking-tight">Vandal</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-9 text-sm">
+        <a href="./services.html" class="text-ink/70 hover:text-ink">Prestations</a>
+        <a href="./realisations.html" class="text-ink">Réalisations</a>
+        <a href="./about.html" class="text-ink/70 hover:text-ink">À propos</a>
+        <a href="./contact.html" class="text-ink/70 hover:text-ink">Contact</a>
+      </nav>
+      <a href="./contact.html" class="hidden md:inline-flex items-center gap-2 text-sm px-5 py-2.5 rounded-full bg-sage-500/10 border border-sage-500/30 text-sage-700 hover:bg-sage-500/15 transition-all">
+        Devis gratuit
+        <span class="w-1.5 h-1.5 rounded-full bg-sage-500"></span>
+      </a>
+      <button id="menuBtn" class="md:hidden text-ink" aria-label="Menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+    <div id="mobileMenu" class="md:hidden hidden bg-white/95 backdrop-blur-lg border-t border-ink/5">
+      <div class="px-6 py-6 flex flex-col gap-4 text-ink">
+        <a href="./services.html">Prestations</a>
+        <a href="./realisations.html">Réalisations</a>
+        <a href="./about.html">À propos</a>
+        <a href="./contact.html">Contact</a>
+        <a href="./contact.html" class="mt-2 inline-flex items-center justify-center px-5 py-3 rounded-full bg-sage-500 text-white">Demander un devis gratuit</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="pt-44 pb-16 md:pt-56 md:pb-24">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="reveal max-w-4xl">
+        <p class="text-sage-600 text-xs tracking-[0.35em] uppercase mb-6">Réalisations</p>
+        <h1 class="text-5xl md:text-7xl tracking-tightest font-light text-ink leading-[1.02]">
+          Le détail,<br/>
+          <span class="text-gray-400 italic font-extralight">avant et après.</span>
+        </h1>
+        <p class="mt-8 text-gray-500 text-lg max-w-xl font-light leading-relaxed">
+          Une sélection de chantiers récents. Chaque image est un espace réel, livré et restitué à ses occupants.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="pb-28">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-5 auto-rows-[280px]">
+        <figure class="reveal group relative md:col-span-8 md:row-span-2 rounded-3xl overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=80" alt="Terrasse restaurée" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+          <figcaption class="absolute bottom-0 p-8">
+            <p class="text-white/60 text-[10px] tracking-[0.3em] uppercase">Nettoyage de terrasse · Neuilly</p>
+            <h3 class="text-white text-2xl md:text-3xl tracking-tight font-light mt-2">Terrasse en pierre ravivée</h3>
+          </figcaption>
+        </figure>
+        <figure class="reveal group relative md:col-span-4 rounded-3xl overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=80" alt="Carrelage repeint" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/55 to-transparent"></div>
+          <figcaption class="absolute bottom-0 p-6">
+            <p class="text-white/60 text-[10px] tracking-[0.3em] uppercase">Peinture sur carrelage</p>
+            <h3 class="text-white text-xl tracking-tight font-light mt-1">Sol minéral uniforme</h3>
+          </figcaption>
+        </figure>
+        <figure class="reveal group relative md:col-span-4 rounded-3xl overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=1200&q=80" alt="Jardin entretenu" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/55 to-transparent"></div>
+          <figcaption class="absolute bottom-0 p-6">
+            <p class="text-white/60 text-[10px] tracking-[0.3em] uppercase">Jardinage · Versailles</p>
+            <h3 class="text-white text-xl tracking-tight font-light mt-1">Haies sculptées</h3>
+          </figcaption>
+        </figure>
+
+        <figure class="reveal group relative md:col-span-4 rounded-3xl overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1616046229478-9901c5536a45?auto=format&fit=crop&w=1200&q=80" alt="Tapisserie posée" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/55 to-transparent"></div>
+          <figcaption class="absolute bottom-0 p-6">
+            <p class="text-white/60 text-[10px] tracking-[0.3em] uppercase">Tapisserie</p>
+            <h3 class="text-white text-xl tracking-tight font-light mt-1">Raccords invisibles</h3>
+          </figcaption>
+        </figure>
+        <figure class="reveal group relative md:col-span-4 rounded-3xl overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=1200&q=80" alt="Peinture intérieure" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/55 to-transparent"></div>
+          <figcaption class="absolute bottom-0 p-6">
+            <p class="text-white/60 text-[10px] tracking-[0.3em] uppercase">Peinture intérieure · Paris 7e</p>
+            <h3 class="text-white text-xl tracking-tight font-light mt-1">Murs en couches calibrées</h3>
+          </figcaption>
+        </figure>
+        <figure class="reveal group relative md:col-span-4 rounded-3xl overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1558635924-b60ccf18352f?auto=format&fit=crop&w=1200&q=80" alt="Dallage nettoyé" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/55 to-transparent"></div>
+          <figcaption class="absolute bottom-0 p-6">
+            <p class="text-white/60 text-[10px] tracking-[0.3em] uppercase">Nettoyage · Boulogne</p>
+            <h3 class="text-white text-xl tracking-tight font-light mt-1">Dallage extérieur</h3>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial -->
+  <section class="py-28 md:py-36 bg-mist/60">
+    <div class="max-w-4xl mx-auto px-6 lg:px-10 text-center reveal">
+      <svg class="mx-auto mb-8" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#a9c0a7" stroke-width="1.25"><path d="M9 7H5a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h2v3M19 7h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h2v3"/></svg>
+      <p class="text-2xl md:text-3xl tracking-tight font-light text-ink leading-snug">
+        « Ils sont arrivés à l'heure, ont travaillé en silence, et sont repartis en laissant la maison plus propre qu'avant. Le résultat paraît évident — comme s'il avait toujours été là. »
+      </p>
+      <p class="mt-8 text-sm text-ink/50 tracking-wide">Mathilde R. — Neuilly-sur-Seine</p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-28 md:py-36">
+    <div class="max-w-4xl mx-auto px-6 lg:px-10 text-center reveal">
+      <h2 class="text-4xl md:text-6xl tracking-tightest font-light text-ink leading-tight">Votre projet, le prochain.</h2>
+      <a href="./contact.html" class="cta-glow mt-10 inline-flex items-center gap-3 px-8 py-4 rounded-full bg-sage-500/95 hover:bg-sage-600 text-white text-sm tracking-wide transition-all">
+        Demander un devis gratuit
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <footer class="border-t border-ink/5 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 py-16 grid md:grid-cols-4 gap-10">
+      <div class="md:col-span-2">
+        <a href="./index.html" class="flex items-center gap-2">
+          <span class="w-7 h-7 rounded-full border border-ink/15 flex items-center justify-center"><span class="w-2 h-2 rounded-full bg-sage-400"></span></span>
+          <span class="text-ink font-medium tracking-tight">Vandal Multiservices</span>
+        </a>
+        <p class="text-gray-500 text-sm mt-4 max-w-sm font-light leading-relaxed">Services à domicile raffinés, exécutés avec la rigueur tranquille d'un atelier d'artisan.</p>
+      </div>
+      <div>
+        <p class="text-xs tracking-[0.25em] uppercase text-ink/40 mb-4">Navigation</p>
+        <ul class="space-y-3 text-sm text-ink/70 font-light">
+          <li><a href="./services.html" class="hover:text-ink">Prestations</a></li>
+          <li><a href="./realisations.html" class="hover:text-ink">Réalisations</a></li>
+          <li><a href="./about.html" class="hover:text-ink">À propos</a></li>
+          <li><a href="./contact.html" class="hover:text-ink">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-xs tracking-[0.25em] uppercase text-ink/40 mb-4">Contact</p>
+        <ul class="space-y-3 text-sm text-ink/70 font-light">
+          <li>bonjour@vandal-services.fr</li>
+          <li>+33 1 84 80 00 00</li>
+          <li>Paris &amp; Île-de-France</li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-ink/5">
+      <div class="max-w-7xl mx-auto px-6 lg:px-10 py-6 flex flex-col md:flex-row md:items-center md:justify-between text-xs text-ink/40 font-light">
+        <p>© <span id="year"></span> Vandal Multiservices. Tous droits réservés.</p>
+        <p>Conçu avec retenue.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./assets/script.js"></script>
+</body>
+</html>
