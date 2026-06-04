@@ -1,4 +1,4 @@
-/* Vandal Multiservices — quiet interaction layer */
+/* Green Clean — quiet interaction layer */
 
 (() => {
   // Year stamp
