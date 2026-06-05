@@ -2,24 +2,38 @@
 
 Place tes fichiers directement dans `assets/images/` avec ces noms exacts.
 
-## Photo de Louis (page d'accueil)
+## Page d'accueil
 
-assets/images/louis.jpg
+assets/images/hero.jpg            ← grande image d'accueil (en haut, plein écran)
+                                    Format conseillé : paysage, 2400 × 1600 px
 
-Format conseillé : portrait, ratio 4/5 (par ex. 1200 × 1500 px), JPG ou PNG.
+assets/images/louis.jpg           ← portrait de Louis (section « Le fondateur »)
+                                    Format conseillé : portrait, 1200 × 1500 px
 
-## Photos de réalisations (page Réalisations)
+## Les 3 prestations (utilisées sur l'accueil ET la page Prestations)
 
-assets/images/01.jpg   ← grande photo principale (en haut à gauche)
+assets/images/entretien.jpg       ← Entretiens (tontes, tailles, désherbage)
+assets/images/amenagement.jpg     ← Aménagement extérieur (massifs, plantations)
+assets/images/debroussaillage.jpg ← Débroussaillage (friches, terrains)
+
+Format conseillé : paysage, 1600 × 1200 px.
+Les mêmes photos sont affichées sur la page d'accueil et sur la page Prestations.
+
+## Page Réalisations
+
+assets/images/01.jpg              ← grande photo principale (en haut à gauche)
 assets/images/02.jpg
 assets/images/03.jpg
 assets/images/04.jpg
 assets/images/05.jpg
 assets/images/06.jpg
-assets/images/07.jpg   ← bandeau pleine largeur en bas
+assets/images/07.jpg              ← bandeau pleine largeur en bas
 
-Format conseillé : paysage, ratio 4/3 ou 16/9 (par ex. 1600 × 1200 px).
-Pour la 01 (la plus grande), une image bien composée fonctionnera le mieux.
-Pour la 07 (bandeau), un format plus panoramique sera idéal.
+Format conseillé : paysage, 1600 × 1200 px.
+
+---
 
 Les extensions .jpg, .jpeg, .png et .webp fonctionnent — assure-toi simplement que le nom du fichier corresponde exactement (en minuscules, sans accent).
+
+Une fois les fichiers poussés sur GitHub, le site les affiche automatiquement.
+Tu peux supprimer les copies locales sur ton ordinateur sans souci : GitHub conserve les images dans le repo.
