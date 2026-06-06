@@ -8,7 +8,7 @@ Le formulaire de la page Contact est déjà branché — il manque juste **l'ide
 
 1. Va sur **https://formspree.io**
 2. Clique **« Get Started »** ou **« Sign Up »**
-3. Crée le compte avec l'adresse **Green.clean2201@gmail.com**
+3. Crée le compte avec l'adresse **green.clean2201@gmail.com**
 4. Confirme l'e-mail (Formspree t'envoie un lien)
 
 Le plan gratuit autorise **50 demandes / mois** — largement suffisant pour démarrer.
@@ -19,7 +19,7 @@ Le plan gratuit autorise **50 demandes / mois** — largement suffisant pour dé
 
 1. Une fois connecté → bouton **« New form »** (ou **« + New Project »** puis **« New Form »**)
 2. **Form name** : `Devis Green Clean`
-3. **Send to** : `Green.clean2201@gmail.com` (déjà rempli si tu t'es inscrit avec)
+3. **Send to** : `green.clean2201@gmail.com` (déjà rempli si tu t'es inscrit avec)
 4. Clique **« Create form »**
 
 Formspree affiche alors une URL du type :
@@ -54,7 +54,7 @@ Sauvegarde, pousse sur GitHub — c'est fait.
 1. Va sur le site → page Contact
 2. Remplis le formulaire avec ton e-mail
 3. Clique **Demander un devis gratuit**
-4. La première fois, Formspree t'envoie un mail de **confirmation** sur Green.clean2201@gmail.com — clique le lien pour activer la réception (action ponctuelle).
+4. La première fois, Formspree t'envoie un mail de **confirmation** sur green.clean2201@gmail.com — clique le lien pour activer la réception (action ponctuelle).
 5. À partir de là, chaque demande arrive dans la boîte Gmail avec :
    - Le nom du client
    - Son e-mail (sur lequel il suffit de cliquer pour répondre)
@@ -69,7 +69,7 @@ Sauvegarde, pousse sur GitHub — c'est fait.
 - Le client clique **« Demander un devis gratuit »**
 - Le bouton affiche **« Envoi en cours… »**
 - Le message vert **« Merci — j'ai bien reçu votre demande… »** apparaît
-- En cas d'erreur, un message rouge propose d'écrire directement à `Green.clean2201@gmail.com` ou d'appeler le `+32 491 11 32 53`
+- En cas d'erreur, un message rouge propose d'écrire directement à `green.clean2201@gmail.com` ou d'appeler le `+32 491 11 32 53`
 
 Le formulaire est protégé contre les robots (champ caché « honeypot » + filtres Formspree).
 
