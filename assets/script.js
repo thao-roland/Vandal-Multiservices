@@ -83,59 +83,38 @@
     });
   });
 
-  // Form submission — envoi via Formspree
+  // Form submission — ouvre l'application e-mail du visiteur (mailto:)
+  // Aucun service tiers, aucune clé : ça marche sur tous les téléphones.
   const form = document.getElementById('eligibilityForm');
   if (form) {
-    form.addEventListener('submit', async (e) => {
+    form.addEventListener('submit', (e) => {
       e.preventDefault();
+      const data = new FormData(form);
+
+      const name     = (data.get('name') || '').trim();
+      const email    = (data.get('email') || '').trim();
+      const phone    = (data.get('telephone') || '').trim();
+      const postcode = (data.get('code_postal') || '').trim();
+      const service  = (data.get('prestation') || '').trim();
+      const message  = (data.get('message') || '').trim();
+
+      const subject = 'Demande de devis Green Clean — ' + (name || 'visiteur du site');
+      const body =
+        'Bonjour Louis,\n\n' +
+        'Demande envoyée via le site Green Clean :\n\n' +
+        '• Nom : ' + name + '\n' +
+        '• E-mail : ' + email + '\n' +
+        '• Téléphone : ' + (phone || '—') + '\n' +
+        '• Code postal : ' + (postcode || '—') + '\n' +
+        '• Prestation : ' + service + '\n\n' +
+        'Message :\n' + (message || '—') + '\n';
+
+      window.location.href = 'mailto:green.clean2201@gmail.com'
+        + '?subject=' + encodeURIComponent(subject)
+        + '&body='   + encodeURIComponent(body);
+
       const success = document.getElementById('formSuccess');
-      const error = document.getElementById('formError');
-      const submitBtn = form.querySelector('button[type="submit"]');
-      const label = submitBtn ? submitBtn.querySelector('.cta-label') : null;
-      const originalLabel = label ? label.textContent : '';
-
-      if (success) success.classList.add('hidden');
-      if (error) error.classList.add('hidden');
-      if (submitBtn) submitBtn.disabled = true;
-      if (label) label.textContent = 'Envoi en cours…';
-
-      const payload = {};
-      new FormData(form).forEach((value, key) => { payload[key] = value; });
-
-      // Honeypot anti-spam (silencieux)
-      if ((payload._gotcha || '').trim()) {
-        if (success) success.classList.remove('hidden');
-        if (submitBtn) submitBtn.disabled = false;
-        if (label) label.textContent = originalLabel;
-        return;
-      }
-
-      try {
-        const response = await fetch(form.action, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-          body: JSON.stringify(payload)
-        });
-
-        let result = {};
-        try { result = await response.json(); } catch (_) {}
-        // Formspree renvoie { ok: true } ou { next, ... } en succès
-        const ok = response.ok && (result.ok === true || result.next || !result.errors);
-
-        if (ok) {
-          if (success) success.classList.remove('hidden');
-          form.reset();
-        } else {
-          console.error('Formspree réponse :', response.status, result);
-          throw new Error((result.errors && result.errors[0] && result.errors[0].message) || ('Statut ' + response.status));
-        }
-      } catch (err) {
-        if (error) error.classList.remove('hidden');
-        console.error('Envoi formulaire :', err);
-      } finally {
-        if (submitBtn) submitBtn.disabled = false;
-        if (label) label.textContent = originalLabel;
-      }
+      if (success) success.classList.remove('hidden');
     });
   }
 

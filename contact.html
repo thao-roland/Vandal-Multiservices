@@ -121,38 +121,14 @@
   <section id="form" class="pb-32">
     <div class="max-w-3xl mx-auto px-6 lg:px-10">
       <!--
-        Formulaire branché sur Formspree (gratuit 50/mois).
-
-        =====================================================
-        ⚠ ACTION REQUISE — créer le formulaire Formspree
-        =====================================================
-        1. Aller sur https://formspree.io et créer un compte
-           avec green.clean2201@gmail.com
-        2. Cliquer "+ New form", nom "Devis Green Clean",
-           destinataire green.clean2201@gmail.com
-        3. Formspree donne une URL du type :
-              https://formspree.io/f/abcdefgh
-           (les 8 derniers caractères = l'ID du formulaire)
-        4. Remplacer YOUR_FORM_ID ci-dessous par ces 8 caractères.
-
-        À la première soumission, Louis recevra un mail de
-        Formspree pour confirmer son adresse (un seul clic sur
-        un lien, pas de page d'erreur comme FormSubmit).
-
-        POUR AJOUTER D'AUTRES DESTINATAIRES :
-        Plan gratuit : 1 destinataire. Plan Pro (10 $/mois) :
-        plusieurs destinataires + CC, à configurer dans le
-        dashboard Formspree.
+        Formulaire en mode mailto: aucun service tiers, aucun compte,
+        aucune clé à gérer. À la soumission, l'application e-mail du
+        visiteur s'ouvre avec un brouillon pré-rempli adressé à
+        green.clean2201@gmail.com (sujet, nom, téléphone, prestation,
+        message). Le visiteur n'a plus qu'à cliquer "Envoyer".
       -->
       <form id="eligibilityForm"
-            action="https://formspree.io/f/YOUR_FORM_ID"
-            method="POST"
             class="reveal space-y-10 bg-mist/60 rounded-3xl p-8 md:p-14 border border-ink/5">
-
-        <!-- Sujet du mail reçu -->
-        <input type="hidden" name="_subject" value="Nouvelle demande de devis - Green Clean" />
-        <!-- Honeypot anti-spam Formspree -->
-        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" aria-hidden="true" />
 
         <div class="grid md:grid-cols-2 gap-8">
           <label class="block">
@@ -196,8 +172,7 @@
             <svg class="cta-arrow transition-transform group-hover:translate-x-1" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
           </button>
         </div>
-        <p id="formSuccess" class="hidden text-sage-600 text-sm pt-4">Merci — votre demande est bien partie. Louis vous répond personnellement sous 48 heures.</p>
-        <p id="formError" class="hidden text-red-600 text-sm pt-4">Une erreur est survenue. Vous pouvez aussi écrire directement à <a href="mailto:green.clean2201@gmail.com" class="underline">green.clean2201@gmail.com</a> ou appeler le <a href="tel:+32491113253" class="underline">+32 491 11 32 53</a>.</p>
+        <p id="formSuccess" class="hidden text-sage-600 text-sm pt-4">Votre application e-mail s'ouvre — il ne reste qu'à cliquer Envoyer pour finaliser.</p>
       </form>
 
       <div class="reveal mt-20 grid md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
