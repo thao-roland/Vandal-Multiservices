@@ -142,21 +142,15 @@
             method="POST"
             class="reveal space-y-10 bg-mist/60 rounded-3xl p-8 md:p-14 border border-ink/5">
 
-        <!-- Destinataires supplémentaires (séparés par virgules) -->
-        <input type="hidden" name="_cc" value="" />
         <!-- Sujet du mail reçu -->
-        <input type="hidden" name="_subject" value="Nouvelle demande de devis — Green Clean" />
-        <!-- Format du mail : tableau lisible -->
-        <input type="hidden" name="_template" value="table" />
-        <!-- Pas de captcha intermédiaire -->
-        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_subject" value="Nouvelle demande de devis - Green Clean" />
         <!-- Honeypot anti-spam : si rempli, c'est un robot -->
         <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" aria-hidden="true" />
 
         <div class="grid md:grid-cols-2 gap-8">
           <label class="block">
             <span class="text-xs tracking-[0.2em] uppercase text-ink/50">Nom complet</span>
-            <input type="text" name="Nom complet" required class="mt-3 w-full bg-transparent border-b border-ink/15 focus:border-sage-500 outline-none py-3 text-ink font-light transition-colors" placeholder="Camille Laurent" />
+            <input type="text" name="name" required class="mt-3 w-full bg-transparent border-b border-ink/15 focus:border-sage-500 outline-none py-3 text-ink font-light transition-colors" placeholder="Camille Laurent" />
           </label>
           <label class="block">
             <span class="text-xs tracking-[0.2em] uppercase text-ink/50">E-mail</span>
@@ -164,28 +158,28 @@
           </label>
           <label class="block">
             <span class="text-xs tracking-[0.2em] uppercase text-ink/50">Téléphone</span>
-            <input type="tel" name="Téléphone" class="mt-3 w-full bg-transparent border-b border-ink/15 focus:border-sage-500 outline-none py-3 text-ink font-light transition-colors" placeholder="Facultatif" />
+            <input type="tel" name="telephone" class="mt-3 w-full bg-transparent border-b border-ink/15 focus:border-sage-500 outline-none py-3 text-ink font-light transition-colors" placeholder="Facultatif" />
           </label>
           <label class="block">
             <span class="text-xs tracking-[0.2em] uppercase text-ink/50">Code postal</span>
-            <input type="text" name="Code postal" class="mt-3 w-full bg-transparent border-b border-ink/15 focus:border-sage-500 outline-none py-3 text-ink font-light transition-colors" placeholder="7140" />
+            <input type="text" name="code_postal" class="mt-3 w-full bg-transparent border-b border-ink/15 focus:border-sage-500 outline-none py-3 text-ink font-light transition-colors" placeholder="7140" />
           </label>
         </div>
 
         <label class="block">
           <span class="text-xs tracking-[0.2em] uppercase text-ink/50">Prestation souhaitée</span>
-          <select name="Prestation" required class="mt-3 w-full bg-transparent border-b border-ink/15 focus:border-sage-500 outline-none py-3 text-ink font-light transition-colors">
+          <select name="prestation" required class="mt-3 w-full bg-transparent border-b border-ink/15 focus:border-sage-500 outline-none py-3 text-ink font-light transition-colors">
             <option value="">Choisissez une prestation…</option>
-            <option>Entretiens (tonte, taille, désherbage)</option>
-            <option>Aménagement extérieur</option>
-            <option>Débroussaillage</option>
+            <option>Entretiens (tonte, taille, desherbage)</option>
+            <option>Amenagement exterieur</option>
+            <option>Debroussaillage</option>
             <option>Plusieurs / Autre</option>
           </select>
         </label>
 
         <label class="block">
           <span class="text-xs tracking-[0.2em] uppercase text-ink/50">Quelques mots sur le projet</span>
-          <textarea name="Message" rows="5" class="mt-3 w-full bg-transparent border-b border-ink/15 focus:border-sage-500 outline-none py-3 text-ink font-light transition-colors resize-none" placeholder="Surface approximative, type de terrain, échéances, particularités…"></textarea>
+          <textarea name="message" rows="5" class="mt-3 w-full bg-transparent border-b border-ink/15 focus:border-sage-500 outline-none py-3 text-ink font-light transition-colors resize-none" placeholder="Surface approximative, type de terrain, echeances, particularites…"></textarea>
         </label>
 
         <div class="pt-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
