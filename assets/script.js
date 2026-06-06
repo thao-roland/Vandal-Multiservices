@@ -83,38 +83,49 @@
     });
   });
 
-  // Form submission — ouvre l'application e-mail du visiteur (mailto:)
-  // Aucun service tiers, aucune clé : ça marche sur tous les téléphones.
+  // Form submission — envoi via la fonction serverless /api/contact (Resend)
   const form = document.getElementById('eligibilityForm');
   if (form) {
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
-      const data = new FormData(form);
-
-      const name     = (data.get('name') || '').trim();
-      const email    = (data.get('email') || '').trim();
-      const phone    = (data.get('telephone') || '').trim();
-      const postcode = (data.get('code_postal') || '').trim();
-      const service  = (data.get('prestation') || '').trim();
-      const message  = (data.get('message') || '').trim();
-
-      const subject = 'Demande de devis Green Clean — ' + (name || 'visiteur du site');
-      const body =
-        'Bonjour Louis,\n\n' +
-        'Demande envoyée via le site Green Clean :\n\n' +
-        '• Nom : ' + name + '\n' +
-        '• E-mail : ' + email + '\n' +
-        '• Téléphone : ' + (phone || '—') + '\n' +
-        '• Code postal : ' + (postcode || '—') + '\n' +
-        '• Prestation : ' + service + '\n\n' +
-        'Message :\n' + (message || '—') + '\n';
-
-      window.location.href = 'mailto:green.clean2201@gmail.com'
-        + '?subject=' + encodeURIComponent(subject)
-        + '&body='   + encodeURIComponent(body);
-
       const success = document.getElementById('formSuccess');
-      if (success) success.classList.remove('hidden');
+      const error = document.getElementById('formError');
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const label = submitBtn ? submitBtn.querySelector('.cta-label') : null;
+      const originalLabel = label ? label.textContent : '';
+
+      if (success) success.classList.add('hidden');
+      if (error) error.classList.add('hidden');
+      if (submitBtn) submitBtn.disabled = true;
+      if (label) label.textContent = 'Envoi en cours…';
+
+      const payload = {};
+      new FormData(form).forEach((value, key) => { payload[key] = value; });
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+
+        let result = {};
+        try { result = await response.json(); } catch (_) {}
+
+        if (response.ok && result.ok) {
+          if (success) success.classList.remove('hidden');
+          form.reset();
+        } else {
+          console.error('/api/contact réponse :', response.status, result);
+          throw new Error(result.error || ('Statut ' + response.status));
+        }
+      } catch (err) {
+        if (error) error.classList.remove('hidden');
+        console.error('Envoi formulaire :', err);
+      } finally {
+        if (submitBtn) submitBtn.disabled = false;
+        if (label) label.textContent = originalLabel;
+      }
     });
   }
 
