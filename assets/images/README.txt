@@ -2,6 +2,13 @@
 
 Place tes fichiers directement dans `assets/images/` avec ces noms exacts.
 
+## Logo (affiché dans la nav et le pied de page de TOUTES les pages)
+
+assets/images/logo.png            ← logo officiel Green Clean
+                                    Format conseillé : PNG avec fond TRANSPARENT
+                                    (sinon le rectangle gris foncé du logo se verra sur fond blanc)
+                                    Hauteur de référence : 200 px ou plus
+
 ## Page d'accueil
 
 assets/images/hero.jpg            ← grande image d'accueil (en haut, plein écran)
