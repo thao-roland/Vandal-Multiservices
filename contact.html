@@ -123,22 +123,25 @@
       <!--
         Formulaire branché sur FormSubmit.co (gratuit, sans inscription).
 
-        ⚠ MODE TEST : jeton FormSubmit lié à thao.roland163@gmail.com
-        29c7041290c7dc42ca4af880991db7f5
+        DESTINATAIRE : green.clean2201@gmail.com (Louis Rouvroy)
 
-        Pour passer en production :
-        1. Pousse une fois le site avec l'adresse de Louis en clair
-           (action="https://formsubmit.co/ajax/green.clean2201@gmail.com")
-        2. Louis reçoit un mail FormSubmit avec son propre jeton aléatoire
-        3. Remplace l'adresse en clair par ce jeton dans `action="..."`
+        À LA TOUTE PREMIÈRE SOUMISSION, Louis va recevoir un mail de
+        FormSubmit avec un bouton « Activate Form ». Il doit cliquer
+        dessus (la page peut afficher "server error" mais l'activation
+        passe quand même). Les soumissions suivantes arrivent direct
+        dans sa boîte Gmail.
 
-        POUR AJOUTER D'AUTRES DESTINATAIRES :
-        Modifie la valeur du champ "_cc" ci-dessous avec les e-mails
-        supplémentaires, séparés par des virgules. Exemple :
-          value="louis.perso@gmail.com,assistant@vandal.be"
+        OPTIONNEL — masquer l'adresse dans le code source :
+        Le mail d'activation contient aussi un jeton aléatoire.
+        Si Louis le préfère, remplace l'adresse ci-dessous par ce jeton :
+          action="https://formsubmit.co/ajax/LE_JETON"
+
+        POUR AJOUTER D'AUTRES DESTINATAIRES en copie :
+        ajouter <input type="hidden" name="_cc" value="email1,email2" />
+        en dessous du _subject.
       -->
       <form id="eligibilityForm"
-            action="https://formsubmit.co/ajax/29c7041290c7dc42ca4af880991db7f5"
+            action="https://formsubmit.co/ajax/green.clean2201@gmail.com"
             method="POST"
             class="reveal space-y-10 bg-mist/60 rounded-3xl p-8 md:p-14 border border-ink/5">
 
