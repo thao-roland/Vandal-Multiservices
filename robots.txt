@@ -1,0 +1,20 @@
+# robots.txt — Green Clean
+# https://green-clean.be
+
+User-agent: *
+Allow: /
+Disallow: /mentions-legales.html
+Disallow: /politique-confidentialite.html
+
+# Bloque les bots scrapers connus
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+# Sitemap
+Sitemap: https://green-clean.be/sitemap.xml

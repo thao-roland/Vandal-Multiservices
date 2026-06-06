@@ -1,15 +1,83 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr-BE">
 <head>
   <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Prestations — Green Clean</title>
-  <meta name="description" content="Entretiens, aménagement extérieur et débroussaillage : trois métiers exercés à la main par un jeune indépendant passionné." />
+
+  <title>Prestations — Entretien, Aménagement Extérieur &amp; Débroussaillage à Morlanwelz | Green Clean Hainaut</title>
+  <meta name="description" content="Entretien de jardin (tonte, taille de haies, désherbage), aménagement extérieur (création de massifs, plantations) et débroussaillage à Morlanwelz et dans tout le Hainaut. Devis gratuit sous 48 h." />
+  <meta name="keywords" content="entretien jardin Morlanwelz, aménagement extérieur Hainaut, débroussaillage Wallonie, tonte pelouse, taille de haies, création de massifs, plantation d'arbres, engazonnement, paysagiste La Louvière, paysagiste Binche" />
+  <meta name="author" content="Louis Rouvroy — Green Clean" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="geo.region" content="BE-WHT" />
+  <meta name="geo.placename" content="Morlanwelz" />
+  <meta name="geo.position" content="50.4583;4.2447" />
+
+  <link rel="canonical" href="https://green-clean.be/services.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_BE" />
+  <meta property="og:site_name" content="Green Clean" />
+  <meta property="og:title" content="Prestations — Entretien, Aménagement &amp; Débroussaillage | Green Clean Hainaut" />
+  <meta property="og:description" content="Trois métiers, une seule main : entretien de jardin, aménagement extérieur, débroussaillage à Morlanwelz et dans tout le Hainaut." />
+  <meta property="og:image" content="https://green-clean.be/assets/images/entretien.jpg" />
+  <meta property="og:url" content="https://green-clean.be/services.html" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Prestations — Green Clean Hainaut" />
+  <meta name="twitter:description" content="Entretien, aménagement extérieur et débroussaillage à Morlanwelz." />
+  <meta name="twitter:image" content="https://green-clean.be/assets/images/entretien.jpg" />
+
+  <meta name="theme-color" content="#5d8a5b" />
+  <link rel="icon" type="image/png" href="./assets/images/logo.png" />
+  <link rel="apple-touch-icon" href="./assets/images/logo.png" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="./assets/styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Prestations de parcs et jardins — Green Clean",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Green Clean",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rue Abel Hélin 5",
+        "addressLocality": "Morlanwelz",
+        "postalCode": "7140",
+        "addressCountry": "BE"
+      },
+      "telephone": "+32491113253"
+    },
+    "areaServed": { "@type": "AdministrativeArea", "name": "Hainaut" },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Catalogue des prestations",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Entretien de jardin", "description": "Tontes, tailles, désherbage et soin des massifs." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Aménagement extérieur", "description": "Création de massifs, haies, plantation d'arbres." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Débroussaillage", "description": "Mise au propre de friches, sécurisation de terrains." } }
+      ]
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://green-clean.be/" },
+      { "@type": "ListItem", "position": 2, "name": "Prestations", "item": "https://green-clean.be/services.html" }
+    ]
+  }
+  </script>
   <script>
     tailwind.config = {
       theme: {
@@ -65,7 +133,7 @@
 
       <article class="reveal group grid md:grid-cols-12 gap-6 items-center rounded-3xl overflow-hidden bg-mist hover:bg-sage-50 transition-colors duration-500">
         <div class="md:col-span-5 relative h-72 md:h-[28rem] bg-sage-50">
-          <img src="./assets/images/entretien.jpg" alt="Entretien de jardin" class="absolute inset-0 w-full h-full object-cover"/>
+          <img loading="lazy" decoding="async" src="./assets/images/entretien.jpg" alt="Entretien de jardin" class="absolute inset-0 w-full h-full object-cover"/>
         </div>
         <div class="md:col-span-7 p-8 md:p-14">
           <div class="flex items-center gap-3 mb-5">
@@ -103,13 +171,13 @@
           </ul>
         </div>
         <div class="md:col-span-5 relative h-72 md:h-[28rem] bg-sage-50 order-1 md:order-2">
-          <img src="./assets/images/amenagement.jpg" alt="Aménagement de jardin" class="absolute inset-0 w-full h-full object-cover"/>
+          <img loading="lazy" decoding="async" src="./assets/images/amenagement.jpg" alt="Aménagement de jardin" class="absolute inset-0 w-full h-full object-cover"/>
         </div>
       </article>
 
       <article class="reveal group grid md:grid-cols-12 gap-6 items-center rounded-3xl overflow-hidden bg-mist hover:bg-sage-50 transition-colors duration-500">
         <div class="md:col-span-5 relative h-72 md:h-[28rem] bg-sage-50">
-          <img src="./assets/images/debroussaillage.jpg" alt="Débroussaillage" class="absolute inset-0 w-full h-full object-cover"/>
+          <img loading="lazy" decoding="async" src="./assets/images/debroussaillage.jpg" alt="Débroussaillage" class="absolute inset-0 w-full h-full object-cover"/>
         </div>
         <div class="md:col-span-7 p-8 md:p-14">
           <div class="flex items-center gap-3 mb-5">
