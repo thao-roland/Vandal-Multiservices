@@ -83,8 +83,9 @@
     });
   });
 
-  // Form submission — ouvre l'application e-mail du visiteur (mailto:)
-  // Aucun service, aucun compte : ça marche sur tous les téléphones.
+  // Form submission — ouvre Gmail compose dans un nouvel onglet
+  // (deep-link vers l'app Gmail sur mobile, Gmail web sur PC).
+  // Fallback mailto: si Gmail ne s'ouvre pas.
   const form = document.getElementById('eligibilityForm');
   if (form) {
     form.addEventListener('submit', (e) => {
@@ -98,6 +99,7 @@
       const service  = (data.get('prestation') || '').trim();
       const message  = (data.get('message') || '').trim();
 
+      const TO = 'green.clean2201@gmail.com';
       const subject = 'Demande de devis Green Clean — ' + (name || 'visiteur du site');
       const body =
         'Bonjour Louis,\n\n' +
@@ -109,9 +111,27 @@
         '• Prestation : ' + service + '\n\n' +
         'Message :\n' + (message || '—') + '\n';
 
-      window.location.href = 'mailto:green.clean2201@gmail.com'
-        + '?subject=' + encodeURIComponent(subject)
-        + '&body='   + encodeURIComponent(body);
+      const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+      if (isMobile) {
+        // Mobile : mailto: laisse l'OS choisir Gmail / Mail / Outlook
+        window.location.href = 'mailto:' + TO
+          + '?subject=' + encodeURIComponent(subject)
+          + '&body='   + encodeURIComponent(body);
+      } else {
+        // Desktop : Gmail compose dans un nouvel onglet
+        const gmailUrl = 'https://mail.google.com/mail/?view=cm&fs=1'
+          + '&to=' + encodeURIComponent(TO)
+          + '&su=' + encodeURIComponent(subject)
+          + '&body=' + encodeURIComponent(body);
+        const win = window.open(gmailUrl, '_blank', 'noopener,noreferrer');
+        // Si la popup est bloquée, fallback mailto:
+        if (!win) {
+          window.location.href = 'mailto:' + TO
+            + '?subject=' + encodeURIComponent(subject)
+            + '&body='   + encodeURIComponent(body);
+        }
+      }
 
       const success = document.getElementById('formSuccess');
       if (success) success.classList.remove('hidden');
