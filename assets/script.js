@@ -83,45 +83,46 @@
     });
   });
 
-  // Form submission — ouvre directement l'appli mail du visiteur (mailto:)
-  // Zéro setup : tout arrive sur green.clean2201@gmail.com.
+  // Form submission — envoi via FormSubmit.co (sans inscription, gratuit)
   const form = document.getElementById('eligibilityForm');
   if (form) {
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
-      const data = new FormData(form);
-
-      // Honeypot anti-spam : si rempli, on ignore
-      if ((data.get('_gotcha') || '').trim()) return;
-
-      const name     = (data.get('Nom complet') || '').trim();
-      const email    = (data.get('email') || '').trim();
-      const phone    = (data.get('Téléphone') || '').trim();
-      const postcode = (data.get('Code postal') || '').trim();
-      const service  = (data.get('Prestation') || '').trim();
-      const message  = (data.get('Message') || '').trim();
-
-      const subject = 'Nouvelle demande de devis — Green Clean';
-      const body =
-        `Bonjour Louis,\n\n` +
-        `Nouvelle demande de devis via le site Green Clean :\n\n` +
-        `• Nom : ${name}\n` +
-        `• E-mail : ${email}\n` +
-        `• Téléphone : ${phone || '—'}\n` +
-        `• Code postal : ${postcode || '—'}\n` +
-        `• Prestation : ${service}\n\n` +
-        `Message :\n${message || '—'}\n`;
-
-      const url = 'mailto:green.clean2201@gmail.com'
-        + '?subject=' + encodeURIComponent(subject)
-        + '&body='    + encodeURIComponent(body);
-
-      window.location.href = url;
-
       const success = document.getElementById('formSuccess');
-      if (success) {
-        success.textContent = "Votre application e-mail s'ouvre — il ne reste qu'à cliquer sur Envoyer pour finaliser votre demande.";
-        success.classList.remove('hidden');
+      const error = document.getElementById('formError');
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const label = submitBtn ? submitBtn.querySelector('.cta-label') : null;
+      const originalLabel = label ? label.textContent : '';
+
+      // Reset
+      if (success) success.classList.add('hidden');
+      if (error) error.classList.add('hidden');
+
+      if (submitBtn) submitBtn.disabled = true;
+      if (label) label.textContent = 'Envoi en cours…';
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+
+        const result = await response.json().catch(() => ({}));
+        const ok = response.ok && (result.success === true || result.success === 'true' || !result.error);
+
+        if (ok) {
+          if (success) success.classList.remove('hidden');
+          form.reset();
+        } else {
+          throw new Error(result.message || 'Erreur ' + response.status);
+        }
+      } catch (err) {
+        if (error) error.classList.remove('hidden');
+        console.error('Envoi formulaire :', err);
+      } finally {
+        if (submitBtn) submitBtn.disabled = false;
+        if (label) label.textContent = originalLabel;
       }
     });
   }

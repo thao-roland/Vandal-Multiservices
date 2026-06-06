@@ -120,11 +120,29 @@
 
   <section id="form" class="pb-32">
     <div class="max-w-3xl mx-auto px-6 lg:px-10">
+      <!--
+        Formulaire branché sur FormSubmit.co (gratuit, sans inscription).
+
+        POUR AJOUTER D'AUTRES DESTINATAIRES :
+        Modifie la valeur du champ "_cc" ci-dessous avec les e-mails
+        supplémentaires, séparés par des virgules. Exemple :
+          value="louis.perso@gmail.com,assistant@vandal.be"
+      -->
       <form id="eligibilityForm"
+            action="https://formsubmit.co/ajax/green.clean2201@gmail.com"
+            method="POST"
             class="reveal space-y-10 bg-mist/60 rounded-3xl p-8 md:p-14 border border-ink/5">
 
+        <!-- Destinataires supplémentaires (séparés par virgules) -->
+        <input type="hidden" name="_cc" value="" />
+        <!-- Sujet du mail reçu -->
+        <input type="hidden" name="_subject" value="Nouvelle demande de devis — Green Clean" />
+        <!-- Format du mail : tableau lisible -->
+        <input type="hidden" name="_template" value="table" />
+        <!-- Pas de captcha intermédiaire -->
+        <input type="hidden" name="_captcha" value="false" />
         <!-- Honeypot anti-spam : si rempli, c'est un robot -->
-        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" aria-hidden="true" />
+        <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" aria-hidden="true" />
 
         <div class="grid md:grid-cols-2 gap-8">
           <label class="block">
@@ -168,7 +186,8 @@
             <svg class="cta-arrow transition-transform group-hover:translate-x-1" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
           </button>
         </div>
-        <p id="formSuccess" class="hidden text-sage-600 text-sm pt-4">Votre application e-mail s'ouvre — il ne reste qu'à cliquer sur Envoyer pour finaliser votre demande.</p>
+        <p id="formSuccess" class="hidden text-sage-600 text-sm pt-4">Merci — votre demande est bien partie. Louis vous répond personnellement sous 48 heures.</p>
+        <p id="formError" class="hidden text-red-600 text-sm pt-4">Une erreur est survenue. Vous pouvez aussi écrire directement à <a href="mailto:green.clean2201@gmail.com" class="underline">green.clean2201@gmail.com</a> ou appeler le <a href="tel:+32491113253" class="underline">+32 491 11 32 53</a>.</p>
       </form>
 
       <div class="reveal mt-20 grid md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
