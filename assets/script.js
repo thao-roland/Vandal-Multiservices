@@ -83,14 +83,45 @@
     });
   });
 
-  // Form submission (front-end only)
+  // Form submission — envoi réel via Formspree (action sur le <form>)
   const form = document.getElementById('eligibilityForm');
   if (form) {
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
       const success = document.getElementById('formSuccess');
-      if (success) success.classList.remove('hidden');
-      form.querySelectorAll('input, textarea, select').forEach((el) => { el.value = ''; });
+      const error = document.getElementById('formError');
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const label = submitBtn ? submitBtn.querySelector('.cta-label') : null;
+      const originalLabel = label ? label.textContent : '';
+
+      // Reset messages
+      if (success) success.classList.add('hidden');
+      if (error) error.classList.add('hidden');
+
+      // État envoi
+      if (submitBtn) submitBtn.disabled = true;
+      if (label) label.textContent = 'Envoi en cours…';
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          if (success) success.classList.remove('hidden');
+          form.reset();
+        } else {
+          throw new Error('Erreur serveur ' + response.status);
+        }
+      } catch (err) {
+        if (error) error.classList.remove('hidden');
+        console.error('Formspree :', err);
+      } finally {
+        if (submitBtn) submitBtn.disabled = false;
+        if (label) label.textContent = originalLabel;
+      }
     });
   }
 
