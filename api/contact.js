@@ -2,7 +2,7 @@
 // Reçoit le POST du formulaire, envoie un e-mail formaté à Louis,
 // puis renvoie {ok: true} pour que le front affiche le succès.
 
-const TO_EMAIL = 'green.clean2201@gmail.com';
+const TO_EMAIL = ['green.clean2201@gmail.com', 'thao.roland163@gmail.com'];
 const FROM_EMAIL = 'Green Clean <onboarding@resend.dev>'; // Resend free tier sans domaine
 
 export default async function handler(req, res) {
