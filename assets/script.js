@@ -94,28 +94,45 @@
       const label = submitBtn ? submitBtn.querySelector('.cta-label') : null;
       const originalLabel = label ? label.textContent : '';
 
-      // Reset
+      // Reset des messages
       if (success) success.classList.add('hidden');
       if (error) error.classList.add('hidden');
 
       if (submitBtn) submitBtn.disabled = true;
       if (label) label.textContent = 'Envoi en cours…';
 
+      // Construction du payload JSON à partir des champs du formulaire
+      const payload = {};
+      new FormData(form).forEach((value, key) => { payload[key] = value; });
+
+      // Honeypot anti-spam (silencieux)
+      if ((payload._honey || '').trim()) {
+        if (success) success.classList.remove('hidden');
+        if (submitBtn) submitBtn.disabled = false;
+        if (label) label.textContent = originalLabel;
+        return;
+      }
+
       try {
         const response = await fetch(form.action, {
           method: 'POST',
-          body: new FormData(form),
-          headers: { 'Accept': 'application/json' }
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify(payload)
         });
 
-        const result = await response.json().catch(() => ({}));
-        const ok = response.ok && (result.success === true || result.success === 'true' || !result.error);
+        let result = {};
+        try { result = await response.json(); } catch (_) { /* réponse vide possible */ }
+        const ok = response.ok && (result.success === true || result.success === 'true' || result.message);
 
         if (ok) {
           if (success) success.classList.remove('hidden');
           form.reset();
         } else {
-          throw new Error(result.message || 'Erreur ' + response.status);
+          console.error('FormSubmit réponse :', response.status, result);
+          throw new Error(result.message || ('Statut ' + response.status));
         }
       } catch (err) {
         if (error) error.classList.remove('hidden');
