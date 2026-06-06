@@ -83,7 +83,7 @@
     });
   });
 
-  // Form submission — envoi via FormSubmit.co (sans inscription, gratuit)
+  // Form submission — envoi via Web3Forms (gratuit, 250/mois)
   const form = document.getElementById('eligibilityForm');
   if (form) {
     form.addEventListener('submit', async (e) => {
@@ -106,7 +106,7 @@
       new FormData(form).forEach((value, key) => { payload[key] = value; });
 
       // Honeypot anti-spam (silencieux)
-      if ((payload._honey || '').trim()) {
+      if (payload.botcheck) {
         if (success) success.classList.remove('hidden');
         if (submitBtn) submitBtn.disabled = false;
         if (label) label.textContent = originalLabel;
@@ -125,13 +125,13 @@
 
         let result = {};
         try { result = await response.json(); } catch (_) { /* réponse vide possible */ }
-        const ok = response.ok && (result.success === true || result.success === 'true' || result.message);
+        const ok = response.ok && result.success === true;
 
         if (ok) {
           if (success) success.classList.remove('hidden');
           form.reset();
         } else {
-          console.error('FormSubmit réponse :', response.status, result);
+          console.error('Web3Forms réponse :', response.status, result);
           throw new Error(result.message || ('Statut ' + response.status));
         }
       } catch (err) {

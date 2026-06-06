@@ -121,34 +121,40 @@
   <section id="form" class="pb-32">
     <div class="max-w-3xl mx-auto px-6 lg:px-10">
       <!--
-        Formulaire branché sur FormSubmit.co (gratuit, sans inscription).
+        Formulaire branché sur Web3Forms (gratuit, 250 envois/mois).
 
-        DESTINATAIRE : green.clean2201@gmail.com (Louis Rouvroy)
+        =====================================================
+        ⚠ ACTION REQUISE — récupérer une clé d'accès
+        =====================================================
+        1. Aller sur : https://web3forms.com
+        2. Cliquer "Create Access Key" et entrer l'email :
+           green.clean2201@gmail.com
+        3. La clé arrive immédiatement par mail (UUID type :
+           xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx)
+        4. Coller cette clé dans l'attribut value du champ
+           ci-dessous, à la place de COLLER_LA_CLE_ICI
 
-        À LA TOUTE PREMIÈRE SOUMISSION, Louis va recevoir un mail de
-        FormSubmit avec un bouton « Activate Form ». Il doit cliquer
-        dessus (la page peut afficher "server error" mais l'activation
-        passe quand même). Les soumissions suivantes arrivent direct
-        dans sa boîte Gmail.
-
-        OPTIONNEL — masquer l'adresse dans le code source :
-        Le mail d'activation contient aussi un jeton aléatoire.
-        Si Louis le préfère, remplace l'adresse ci-dessous par ce jeton :
-          action="https://formsubmit.co/ajax/LE_JETON"
+        Pas d'inscription, pas d'activation à cliquer, pas de
+        compte à créer. Dès que la clé est en place, les
+        demandes arrivent direct dans la boîte Gmail.
 
         POUR AJOUTER D'AUTRES DESTINATAIRES en copie :
-        ajouter <input type="hidden" name="_cc" value="email1,email2" />
-        en dessous du _subject.
+        ajouter <input type="hidden" name="cc" value="email1,email2" />
+        en dessous du champ access_key.
       -->
       <form id="eligibilityForm"
-            action="https://formsubmit.co/ajax/green.clean2201@gmail.com"
+            action="https://api.web3forms.com/submit"
             method="POST"
             class="reveal space-y-10 bg-mist/60 rounded-3xl p-8 md:p-14 border border-ink/5">
 
+        <!-- Clé d'accès Web3Forms (à remplacer) -->
+        <input type="hidden" name="access_key" value="COLLER_LA_CLE_ICI" />
         <!-- Sujet du mail reçu -->
-        <input type="hidden" name="_subject" value="Nouvelle demande de devis - Green Clean" />
-        <!-- Honeypot anti-spam : si rempli, c'est un robot -->
-        <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" aria-hidden="true" />
+        <input type="hidden" name="subject" value="Nouvelle demande de devis - Green Clean" />
+        <!-- Nom de l'expéditeur affiché dans Gmail -->
+        <input type="hidden" name="from_name" value="Site Green Clean" />
+        <!-- Anti-spam : honeypot -->
+        <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" aria-hidden="true" />
 
         <div class="grid md:grid-cols-2 gap-8">
           <label class="block">
