@@ -119,12 +119,20 @@
           + '?subject=' + encodeURIComponent(subject)
           + '&body='   + encodeURIComponent(body);
       } else {
-        // Desktop : redirection directe vers Gmail compose (même onglet)
-        // → pas de popup bloqué, pas de dialogue Windows mailto
-        window.location.href = 'https://mail.google.com/mail/?view=cm&fs=1'
+        // Desktop : Gmail compose en nouvel onglet via clic programmatique
+        // (contourne les popup blockers) + fallback navigation directe.
+        const gmailUrl = 'https://mail.google.com/mail/?view=cm&fs=1'
           + '&to=' + encodeURIComponent(TO)
           + '&su=' + encodeURIComponent(subject)
           + '&body=' + encodeURIComponent(body);
+
+        const a = document.createElement('a');
+        a.href = gmailUrl;
+        a.target = '_blank';
+        a.rel = 'noopener noreferrer';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
       }
 
       const success = document.getElementById('formSuccess');
