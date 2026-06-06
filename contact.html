@@ -121,29 +121,38 @@
   <section id="form" class="pb-32">
     <div class="max-w-3xl mx-auto px-6 lg:px-10">
       <!--
-        Formulaire branché sur FormSubmit.co.
+        Formulaire branché sur Formspree (gratuit 50/mois).
 
-        ⚠ À FAIRE : Louis doit chercher dans son Gmail le mail
-        de FormSubmit (objet « Action Required: Activate FormSubmit
-        on https://vandal-multiservices.vercel.app/ »). Dans le corps
-        du mail il y a un JETON ALÉATOIRE de 32 caractères (ex :
-        29c7041290c7dc42ca4af880991db7f5). NE PAS cliquer sur le
-        bouton « Activate Form » qui plante — il faut juste copier
-        ce jeton et le mettre à la place de l'email en clair dans
-        l'attribut `action` ci-dessous :
-            action="https://formsubmit.co/ajax/LE_JETON_DE_LOUIS"
-        Tant que c'est l'email en clair, l'activation n'est pas
-        confirmée et le formulaire ne délivrera pas.
+        =====================================================
+        ⚠ ACTION REQUISE — créer le formulaire Formspree
+        =====================================================
+        1. Aller sur https://formspree.io et créer un compte
+           avec green.clean2201@gmail.com
+        2. Cliquer "+ New form", nom "Devis Green Clean",
+           destinataire green.clean2201@gmail.com
+        3. Formspree donne une URL du type :
+              https://formspree.io/f/abcdefgh
+           (les 8 derniers caractères = l'ID du formulaire)
+        4. Remplacer YOUR_FORM_ID ci-dessous par ces 8 caractères.
+
+        À la première soumission, Louis recevra un mail de
+        Formspree pour confirmer son adresse (un seul clic sur
+        un lien, pas de page d'erreur comme FormSubmit).
+
+        POUR AJOUTER D'AUTRES DESTINATAIRES :
+        Plan gratuit : 1 destinataire. Plan Pro (10 $/mois) :
+        plusieurs destinataires + CC, à configurer dans le
+        dashboard Formspree.
       -->
       <form id="eligibilityForm"
-            action="https://formsubmit.co/ajax/green.clean2201@gmail.com"
+            action="https://formspree.io/f/YOUR_FORM_ID"
             method="POST"
             class="reveal space-y-10 bg-mist/60 rounded-3xl p-8 md:p-14 border border-ink/5">
 
         <!-- Sujet du mail reçu -->
         <input type="hidden" name="_subject" value="Nouvelle demande de devis - Green Clean" />
-        <!-- Honeypot anti-spam -->
-        <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" aria-hidden="true" />
+        <!-- Honeypot anti-spam Formspree -->
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" aria-hidden="true" />
 
         <div class="grid md:grid-cols-2 gap-8">
           <label class="block">

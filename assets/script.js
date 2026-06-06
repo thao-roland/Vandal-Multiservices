@@ -83,7 +83,7 @@
     });
   });
 
-  // Form submission — envoi via FormSubmit.co (en JSON)
+  // Form submission — envoi via Formspree
   const form = document.getElementById('eligibilityForm');
   if (form) {
     form.addEventListener('submit', async (e) => {
@@ -102,7 +102,8 @@
       const payload = {};
       new FormData(form).forEach((value, key) => { payload[key] = value; });
 
-      if ((payload._honey || '').trim()) {
+      // Honeypot anti-spam (silencieux)
+      if ((payload._gotcha || '').trim()) {
         if (success) success.classList.remove('hidden');
         if (submitBtn) submitBtn.disabled = false;
         if (label) label.textContent = originalLabel;
@@ -118,14 +119,15 @@
 
         let result = {};
         try { result = await response.json(); } catch (_) {}
-        const ok = response.ok && (result.success === true || result.success === 'true' || result.message);
+        // Formspree renvoie { ok: true } ou { next, ... } en succès
+        const ok = response.ok && (result.ok === true || result.next || !result.errors);
 
         if (ok) {
           if (success) success.classList.remove('hidden');
           form.reset();
         } else {
-          console.error('FormSubmit réponse :', response.status, result);
-          throw new Error(result.message || ('Statut ' + response.status));
+          console.error('Formspree réponse :', response.status, result);
+          throw new Error((result.errors && result.errors[0] && result.errors[0].message) || ('Statut ' + response.status));
         }
       } catch (err) {
         if (error) error.classList.remove('hidden');
