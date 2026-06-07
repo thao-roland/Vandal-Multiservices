@@ -35,11 +35,11 @@ Tout est prêt côté code. Voici ce qui a été fait et les **3 actions externe
 
 ### 1. Acheter le nom de domaine
 
-Recommandé : **green-clean.be** (Belgique → mieux pour Google Belgique)
+Recommandé : **green-clean-jardin.com** (Belgique → mieux pour Google Belgique)
 
 Si le domaine est différent, lance cette commande pour tout mettre à jour :
 ```bash
-find . -name "*.html" -o -name "*.xml" -o -name "*.txt" | xargs sed -i 's|green-clean.be|TON-DOMAINE.be|g'
+find . -name "*.html" -o -name "*.xml" -o -name "*.txt" | xargs sed -i 's|green-clean-jardin.com|TON-DOMAINE.be|g'
 ```
 
 ### 2. Créer une fiche Google Business Profile

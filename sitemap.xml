@@ -3,77 +3,77 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
   <url>
-    <loc>https://green-clean.be/</loc>
+    <loc>https://green-clean-jardin.com/</loc>
     <lastmod>2026-06-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://green-clean.be/assets/images/hero.jpg</image:loc>
+      <image:loc>https://green-clean-jardin.com/assets/images/hero.jpg</image:loc>
       <image:caption>Jardin entretenu par Green Clean à Morlanwelz</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://green-clean.be/assets/images/louis.jpg</image:loc>
+      <image:loc>https://green-clean-jardin.com/assets/images/louis.jpg</image:loc>
       <image:caption>Louis Rouvroy, fondateur de Green Clean</image:caption>
     </image:image>
   </url>
 
   <url>
-    <loc>https://green-clean.be/services.html</loc>
+    <loc>https://green-clean-jardin.com/services.html</loc>
     <lastmod>2026-06-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://green-clean.be/assets/images/entretien.jpg</image:loc>
+      <image:loc>https://green-clean-jardin.com/assets/images/entretien.jpg</image:loc>
       <image:caption>Entretien de jardin — Green Clean Hainaut</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://green-clean.be/assets/images/amenagement.jpg</image:loc>
+      <image:loc>https://green-clean-jardin.com/assets/images/amenagement.jpg</image:loc>
       <image:caption>Aménagement extérieur — Green Clean Hainaut</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://green-clean.be/assets/images/debroussaillage.jpg</image:loc>
+      <image:loc>https://green-clean-jardin.com/assets/images/debroussaillage.jpg</image:loc>
       <image:caption>Débroussaillage — Green Clean Hainaut</image:caption>
     </image:image>
   </url>
 
   <url>
-    <loc>https://green-clean.be/realisations.html</loc>
+    <loc>https://green-clean-jardin.com/realisations.html</loc>
     <lastmod>2026-06-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://green-clean.be/assets/images/01.jpg</image:loc>
+      <image:loc>https://green-clean-jardin.com/assets/images/01.jpg</image:loc>
       <image:caption>Réalisation paysagère — Green Clean</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://green-clean.be/assets/images/02.jpg</image:loc>
+      <image:loc>https://green-clean-jardin.com/assets/images/02.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://green-clean.be/assets/images/03.jpg</image:loc>
+      <image:loc>https://green-clean-jardin.com/assets/images/03.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://green-clean.be/assets/images/04.jpg</image:loc>
+      <image:loc>https://green-clean-jardin.com/assets/images/04.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://green-clean.be/assets/images/05.jpg</image:loc>
+      <image:loc>https://green-clean-jardin.com/assets/images/05.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://green-clean.be/assets/images/06.jpg</image:loc>
+      <image:loc>https://green-clean-jardin.com/assets/images/06.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://green-clean.be/assets/images/07.jpg</image:loc>
+      <image:loc>https://green-clean-jardin.com/assets/images/07.jpg</image:loc>
     </image:image>
   </url>
 
   <url>
-    <loc>https://green-clean.be/about.html</loc>
+    <loc>https://green-clean-jardin.com/about.html</loc>
     <lastmod>2026-06-06</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://green-clean.be/contact.html</loc>
+    <loc>https://green-clean-jardin.com/contact.html</loc>
     <lastmod>2026-06-06</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.9</priority>

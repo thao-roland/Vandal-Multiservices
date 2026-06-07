@@ -1,5 +1,5 @@
 # robots.txt — Green Clean
-# https://green-clean.be
+# https://green-clean-jardin.com
 
 User-agent: *
 Allow: /
@@ -17,4 +17,4 @@ User-agent: MJ12bot
 Disallow: /
 
 # Sitemap
-Sitemap: https://green-clean.be/sitemap.xml
+Sitemap: https://green-clean-jardin.com/sitemap.xml
