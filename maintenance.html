@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr-BE">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Site temporairement fermé — Green Clean</title>
+  <meta name="description" content="Le site Green Clean est momentanément indisponible." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="./assets/images/logo.png" />
+  <meta name="theme-color" content="#5d8a5b" />
+
+  <style>
+    :root {
+      --sage-50:  #f4f7f4;
+      --sage-200: #cddacb;
+      --sage-400: #82a280;
+      --sage-500: #5d8a5b;
+      --sage-600: #456b44;
+      --sage-700: #365538;
+      --ink: #0a0a0a;
+      --mist: #f5f5f7;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      height: 100%;
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      background: #ffffff;
+      color: var(--ink);
+      -webkit-font-smoothing: antialiased;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      text-align: center;
+      background-image: radial-gradient(circle at top, var(--sage-50) 0%, #ffffff 60%);
+    }
+    .logo {
+      width: 96px;
+      height: auto;
+      margin-bottom: 3rem;
+      opacity: 0.95;
+    }
+    .badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--sage-600);
+      margin-bottom: 1.5rem;
+      padding: 0.4rem 1rem;
+      border: 1px solid var(--sage-200);
+      border-radius: 9999px;
+      background: rgba(244, 247, 244, 0.6);
+    }
+    h1 {
+      font-size: clamp(2.25rem, 6vw, 3.75rem);
+      font-weight: 300;
+      letter-spacing: -0.04em;
+      line-height: 1.05;
+      max-width: 32rem;
+      margin-bottom: 1.25rem;
+    }
+    h1 em {
+      display: block;
+      font-style: italic;
+      font-weight: 200;
+      color: #9ca3af;
+      margin-top: 0.25rem;
+    }
+    p.lead {
+      font-size: 1.05rem;
+      font-weight: 300;
+      line-height: 1.65;
+      color: #6b7280;
+      max-width: 30rem;
+      margin: 0 auto 2.5rem;
+    }
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.75rem;
+    }
+    .contact a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.85rem 1.5rem;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      background: var(--mist);
+      color: var(--ink);
+      border: 1px solid transparent;
+    }
+    .contact a:hover {
+      background: var(--sage-50);
+      border-color: var(--sage-200);
+      color: var(--sage-700);
+    }
+    .contact a.primary {
+      background: var(--sage-500);
+      color: white;
+    }
+    .contact a.primary:hover {
+      background: var(--sage-600);
+    }
+    footer {
+      margin-top: 4rem;
+      font-size: 0.75rem;
+      color: #9ca3af;
+      letter-spacing: 0.05em;
+    }
+  </style>
+</head>
+<body>
+  <img src="./assets/images/logo.png" alt="Green Clean" class="logo" onerror="this.style.display='none'" />
+
+  <span class="badge">Information</span>
+
+  <h1>
+    Site temporairement fermé.
+    <em>Merci de votre patience.</em>
+  </h1>
+
+  <p class="lead">
+    Notre site est momentanément indisponible. Pour toute demande de devis ou d'information, vous pouvez joindre Louis directement.
+  </p>
+
+  <div class="contact">
+    <a class="primary" href="tel:+32491113253">
+      Appeler — +32 491 11 32 53
+    </a>
+    <a href="mailto:green.clean2201@gmail.com">
+      green.clean2201@gmail.com
+    </a>
+  </div>
+
+  <footer>© Green Clean — Parcs &amp; Jardins · Morlanwelz</footer>
+</body>
+</html>

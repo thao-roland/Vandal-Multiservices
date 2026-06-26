@@ -1,0 +1,28 @@
+{
+  "rewrites": [
+    { "source": "/",                              "destination": "/maintenance.html" },
+    { "source": "/index",                         "destination": "/maintenance.html" },
+    { "source": "/index.html",                    "destination": "/maintenance.html" },
+    { "source": "/services",                      "destination": "/maintenance.html" },
+    { "source": "/services.html",                 "destination": "/maintenance.html" },
+    { "source": "/realisations",                  "destination": "/maintenance.html" },
+    { "source": "/realisations.html",             "destination": "/maintenance.html" },
+    { "source": "/about",                         "destination": "/maintenance.html" },
+    { "source": "/about.html",                    "destination": "/maintenance.html" },
+    { "source": "/contact",                       "destination": "/maintenance.html" },
+    { "source": "/contact.html",                  "destination": "/maintenance.html" },
+    { "source": "/mentions-legales",              "destination": "/maintenance.html" },
+    { "source": "/mentions-legales.html",         "destination": "/maintenance.html" },
+    { "source": "/politique-confidentialite",     "destination": "/maintenance.html" },
+    { "source": "/politique-confidentialite.html","destination": "/maintenance.html" }
+  ],
+  "headers": [
+    {
+      "source": "/maintenance.html",
+      "headers": [
+        { "key": "X-Robots-Tag", "value": "noindex, nofollow" },
+        { "key": "Cache-Control", "value": "no-store, max-age=0" }
+      ]
+    }
+  ]
+}
